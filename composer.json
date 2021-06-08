@@ -2,9 +2,9 @@
   "name": "arrobait/mo-connect-php-middleware",
   "type": "library",
   "require": {
-    "ext-curl": "^7.4",
     "ext-json": "*",
-    "vlucas/phpdotenv": "^5.3"
+    "vlucas/phpdotenv": "^5.3",
+    "guzzlehttp/guzzle": "^7.0"
   },
   "authors": [
     {

@@ -2,10 +2,14 @@
 
 namespace ArrobaIt\Tests;
 
+use GuzzleHttp\Client as BaseClient;
 use ArrobaIt\MoConnectApi\Client;
-use ArrobaIt\MoConnectApi\Models\ApiInfo;
+use ArrobaIt\MoConnectApi\Models\ApiInformation\ApiInfo;
 use ArrobaIt\MoConnectApi\Services\ApiInfoService;
 use Dotenv\Dotenv;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 
 final class ApiInfoTest extends TestCase
@@ -19,13 +23,15 @@ final class ApiInfoTest extends TestCase
         $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
         $dotenv->load();
 
-        $credentials = [
-            'username' => $_ENV['USERNAME'],
-            'password' => $_ENV['PASSWORD'],
-            'company' => $_ENV['COMPANY_ID'],
-        ];
+        $mockResponse = file_get_contents(__DIR__ . '/mock/bodies/apiInformation.json');
 
-        $client = Client::fromCredentials($credentials);
+        $mock = new MockHandler([
+            new Response(200, [], $mockResponse),
+        ]);
+
+        $handlerStack = HandlerStack::create($mock);
+
+        $client = new Client($_ENV['USERNAME'], $_ENV['PASSWORD'], $_ENV['COMPANY_ID'], $handlerStack);
         $this->service = new ApiInfoService($client);
     }
 

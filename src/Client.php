@@ -2,6 +2,9 @@
 
 namespace ArrobaIt\MoConnectApi;
 
+use GuzzleHttp\HandlerStack;
+use Psr\Http\Message\ResponseInterface;
+
 class Client
 {
     /**
@@ -9,36 +12,34 @@ class Client
      */
     private const MO_API_URL = 'http://127.0.0.1:8084/monkeyOfficeConnectJSON';
 
-    /**
-     * Zugriffs-Login MonKey Office Connect
-     */
-    private static string $moApiUserName = '';
+    protected \GuzzleHttp\Client $client;
 
-    /**
-     * Zugriffs-Passwort MonKey Office Connect
-     */
-    private static string $moApiPassword = '';
+    protected string $moApiFirma;
 
-    /**
-     * Selektiere Firma für Zugriffe
-     */
-    private static $moApiFirma = '';
-
-//    /**
-//     * interne Variable für Content als JSON-Objekt
-//     */
-//    protected $m_json;
-
-    protected static $curlHandle;
-
-
-    public function __construct(string $username, string $password, string $company = null)
+    public function __construct(string $username, string $password, string $company = '', HandlerStack $handler = null)
     {
-        self::$moApiUserName = $username;
-        self::$moApiPassword = $password;
-        self::$moApiFirma = $company;
+        $headers['Content-Type'] = 'application/x-www-form-urlencoded';
 
-        $this->connectMo();
+        if ($company !== '') {
+            $headers['mbl-ident'] = $company;
+        }
+
+        $config = [
+            'base_uri' => self::MO_API_URL,
+            'verify' => false,
+            'allow_redirects' => true,
+            'auth' => [
+                $username,
+                $password
+            ],
+            'headers' => $headers,
+        ];
+
+        if ($handler instanceof HandlerStack) {
+            $config['handler'] = $handler;
+        }
+
+        $this->client = new \GuzzleHttp\Client($config);
     }
 
     public static function fromCredentials(array $credentials): self
@@ -48,7 +49,7 @@ class Client
 
     public function setCompany(string $company): void
     {
-        self::$moApiFirma = $company;
+        $this->moApiFirma = $company;
     }
 
     /**
@@ -111,56 +112,20 @@ class Client
         return '';
     }
 
-    public function isConnected(): bool
-    {
-        return isset(self::$curlHandle);
-    }
-
-    public function isDisconnected(): bool
-    {
-        return !isset(self::$curlHandle);
-    }
-
-    public function connectMo(): void
-    {
-        if ($this->isDisconnected()) {
-            self::$curlHandle = curl_init();
-            curl_setopt(self::$curlHandle, CURLOPT_URL, self::MO_API_URL);
-            curl_setopt(self::$curlHandle, CURLOPT_HEADER, false);
-            curl_setopt(self::$curlHandle, CURLOPT_FOLLOWLOCATION, true);
-            curl_setopt(self::$curlHandle, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt(self::$curlHandle, CURLOPT_USERPWD, self::$moApiUserName . ":" . self::$moApiPassword);
-            curl_setopt(self::$curlHandle, CURLOPT_HTTPAUTH,  CURLAUTH_ANY);
-            curl_setopt(self::$curlHandle, CURLOPT_POST, true);
-            curl_setopt(self::$curlHandle, CURLOPT_RETURNTRANSFER,  true);
-        }
-    }
 
     /**
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public function call(array $request)
+    public function send(array $request): object
     {
-        if ($this->isDisconnected()) {
-            $this->connectMo();
-        }
+        $response = $this->client->post(self::MO_API_URL, [
+            'debug' => false,
+            'body' => json_encode($request, JSON_THROW_ON_ERROR),
+        ]);
 
-        $requestJson = json_encode($request, JSON_THROW_ON_ERROR);
-        if (self::$moApiFirma !== '') {
-            curl_setopt(self::$curlHandle, CURLOPT_HTTPHEADER, ['mbl-ident: ' . self::$moApiFirma]);
-        }
-        curl_setopt(self::$curlHandle, CURLOPT_HTTPHEADER, ['Content-Length: ' . strlen($requestJson)]);
-        curl_setopt(self::$curlHandle, CURLOPT_POSTFIELDS, $requestJson);
-
-        $json = curl_exec(self::$curlHandle);
-        return json_decode($json, false, 512, JSON_THROW_ON_ERROR);
-    }
-
-    public function disconnectMo(): void
-    {
-        if (isset(self::$curlHandle)) {
-            curl_close(self::$curlHandle);
-            self::$curlHandle = null;
+        if ($response->getStatusCode() === 200) {
+            return json_decode($response->getBody()->getContents(), false, 512, JSON_THROW_ON_ERROR);
         }
     }
 

@@ -29,35 +29,6 @@ final class ClientTest extends TestCase
     /**
      * @test
      */
-    public function isConnectedAfterCreation(): void
-    {
-        self::assertTrue($this->client->isConnected());
-    }
-
-    /**
-     * @test
-     */
-    public function isDisconnectedAfterDisconnect(): void
-    {
-        $this->client->disconnectMo();
-        self::assertTrue($this->client->isDisconnected());
-    }
-
-    /**
-     * @test
-     */
-    public function canConnectAndDisconnect(): void
-    {
-        self::assertTrue($this->client->isConnected());
-        $this->client->disconnectMo();
-        self::assertTrue($this->client->isDisconnected());
-        $this->client->connectMo();
-        self::assertTrue($this->client->isConnected());
-    }
-
-    /**
-     * @test
-     */
     public function hasContentAfterCallingService(): void
     {
         $service = new ApiInfoService($this->client);
@@ -87,7 +58,7 @@ final class ClientTest extends TestCase
             'apiInfoGet' => '',
         ];
 
-        $foo = $this->client->call($request);
+        $foo = $this->client->send($request);
         self::assertInstanceOf(stdClass::class, $foo);
     }
 }

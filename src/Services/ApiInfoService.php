@@ -3,17 +3,11 @@
 namespace ArrobaIt\MoConnectApi\Services;
 
 use ArrobaIt\MoConnectApi\Client;
-use ArrobaIt\MoConnectApi\Models\ApiInfo;
+use ArrobaIt\MoConnectApi\Models\ApiInformation\ApiInfo;
+use GuzzleHttp\Exception\GuzzleException;
 
-class ApiInfoService
+class ApiInfoService extends BaseService
 {
-    protected Client $client;
-
-    public function __construct(Client $client)
-    {
-        $this->client = $client;
-    }
-
     public function apiInfoGet(): ApiInfo
     {
         $request = [
@@ -21,9 +15,9 @@ class ApiInfoService
         ];
 
         try {
-            $info = $this->client->call($request);
-            return ApiInfo::fromResponse($info->apiInfoGetResponse->ReturnData);
-        } catch (\JsonException $e) {
+            $response = $this->client->send($request);
+            return ApiInfo::fromResponse($response->apiInfoGetResponse->ReturnData);
+        } catch (\JsonException | GuzzleException $e) {
         }
     }
 }
