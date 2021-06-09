@@ -1,0 +1,129 @@
+{
+ "apisessioninfoGetResponse": {
+  "ReturnData": {
+   "apisessionInfoItem": {
+    "App_Datenbank": "cubeSQL@localhost:4430:admin:Business.sdb",
+    "App_DBSchemaVersion": 91,
+    "Firma_ID": "4F01644397CE0566C14498B2",
+    "Benutzer_ID": "4B0D785B82EB2950A438E6BD44130C",
+    "User_Name": "jane.doe",
+    "UserAccessItemList": {
+     "UserAccessItem": [
+      {
+       "Modul_ID": "firmen",
+       "ModulName": "Firmen",
+       "Zugriff": true,
+       "Anlegen": false,
+       "Aendern": false,
+       "Loeschen": false
+      },
+      {
+       "Modul_ID": "vorgaben",
+       "ModulName": "Vorgaben",
+       "Zugriff": true,
+       "Anlegen": false,
+       "Aendern": false,
+       "Loeschen": false
+      },
+      {
+       "Modul_ID": "adressen",
+       "ModulName": "Adressen",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": true,
+       "Loeschen": true
+      },
+      {
+       "Modul_ID": "artikel",
+       "ModulName": "Artikel und Leistungen",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": true,
+       "Loeschen": true
+      },
+      {
+       "Modul_ID": "lager",
+       "ModulName": "Lager",
+       "Zugriff": true,
+       "Anlegen": false,
+       "Aendern": false,
+       "Loeschen": false
+      },
+      {
+       "Modul_ID": "verkauf",
+       "ModulName": "Verkaufsbelege",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": false,
+       "Loeschen": true
+      },
+      {
+       "Modul_ID": "einkauf",
+       "ModulName": "Einkaufsbelege",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": false,
+       "Loeschen": true
+      },
+      {
+       "Modul_ID": "buchungen",
+       "ModulName": "Buchungen",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": false,
+       "Loeschen": false
+      },
+      {
+       "Modul_ID": "debitoren",
+       "ModulName": "Debitoren",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": false,
+       "Loeschen": true
+      },
+      {
+       "Modul_ID": "kreditoren",
+       "ModulName": "Kreditoren",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": false,
+       "Loeschen": true
+      },
+      {
+       "Modul_ID": "offenePosten",
+       "ModulName": "Offene Posten",
+       "Zugriff": true,
+       "Anlegen": false,
+       "Aendern": false,
+       "Loeschen": false
+      },
+      {
+       "Modul_ID": "projekte",
+       "ModulName": "Projekte",
+       "Zugriff": true,
+       "Anlegen": false,
+       "Aendern": false,
+       "Loeschen": false
+      },
+      {
+       "Modul_ID": "attachment",
+       "ModulName": "Attachment-Verwaltung",
+       "Zugriff": true,
+       "Anlegen": true,
+       "Aendern": false,
+       "Loeschen": true
+      },
+      {
+       "Modul_ID": "apiinfo",
+       "ModulName": "API Information",
+       "Zugriff": true,
+       "Anlegen": false,
+       "Aendern": false,
+       "Loeschen": false
+      }
+     ]
+    }
+   }
+  }
+ }
+}

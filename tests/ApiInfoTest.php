@@ -2,7 +2,6 @@
 
 namespace ArrobaIt\Tests;
 
-use GuzzleHttp\Client as BaseClient;
 use ArrobaIt\MoConnectApi\Client;
 use ArrobaIt\MoConnectApi\Models\ApiInformation\ApiInfo;
 use ArrobaIt\MoConnectApi\Services\ApiInfoService;
