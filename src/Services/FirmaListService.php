@@ -2,7 +2,6 @@
 
 namespace ArrobaIt\MoConnectApi\Services;
 
-use ArrobaIt\MoConnectApi\Models\Firmen\FirmaListItem;
 use ArrobaIt\MoConnectApi\Models\Firmen\FirmaListItems;
 
 class FirmaListService extends BaseService

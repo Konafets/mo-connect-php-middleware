@@ -2,7 +2,6 @@
 
 namespace ArrobaIt\MoConnectApi\Services;
 
-use ArrobaIt\MoConnectApi\Client;
 use ArrobaIt\MoConnectApi\Models\ApiInformation\ApiInfo;
 use GuzzleHttp\Exception\GuzzleException;
 
