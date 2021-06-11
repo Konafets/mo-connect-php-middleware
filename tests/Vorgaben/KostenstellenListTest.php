@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace ArrobaIt\Tests\ApiInformation;
+namespace ArrobaIt\Tests\Vorgaben;
 
 use ArrobaIt\MoConnectApi\Models\Vorgaben\Collections\KostenstelleListItemCollection;
 use ArrobaIt\MoConnectApi\Services\Vorgaben\KostenstellenListService;
@@ -20,35 +20,6 @@ final class KostenstellenListTest extends BaseTest
 
         $this->service = new KostenstellenListService($this->client);
         $this->result = $this->service->kostenstellenList();
-    }
-
-    /**
-     * @test
-     */
-    public function resultContainsThreeItems(): void
-    {
-        self::assertCount(3, $this->result);
-    }
-
-    public function kostenstellenProvider(): array
-    {
-        return [
-            [
-                'Foo',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque.',
-                'Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.'
-            ],
-            [
-                'Bar',
-                'Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.',
-                'Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien.'
-            ],
-            [
-                'Baz',
-                'Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.',
-                'Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.'
-            ],
-        ];
     }
 
     /**
