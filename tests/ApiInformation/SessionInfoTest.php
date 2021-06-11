@@ -1,39 +1,23 @@
 <?php declare(strict_types=1);
 
-namespace ArrobaIt\Tests;
+namespace ArrobaIt\Tests\ApiInformation;
 
 use ArrobaIt\MoConnectApi\Services\SessionInfoService;
-use ArrobaIt\MoConnectApi\Client;
-use Dotenv\Dotenv;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Psr7\Response;
-use PHPUnit\Framework\TestCase;
+use ArrobaIt\Tests\BaseTest;
 
-final class SessionInfoTest extends TestCase
+final class SessionInfoTest extends BaseTest
 {
-    protected Client $client;
-
     protected SessionInfoService $service;
+
+    protected string $nameOfBodyMockFile = 'apisessioninfoGetResponse';
 
     protected $result;
 
     public function setUp(): void
     {
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
-        $dotenv->load();
+        parent::setUp();
 
-        $mockResponse = file_get_contents(__DIR__ . '/mock/bodies/apisessioninfoGetResponse.json');
-
-        $mock = new MockHandler([
-            new Response(200, [], $mockResponse),
-        ]);
-
-        $handlerStack = HandlerStack::create($mock);
-
-        $client = new Client($_ENV['USERNAME'], $_ENV['PASSWORD'], $_ENV['COMPANY_ID'], $handlerStack);
-        $this->service = new SessionInfoService($client);
-
+        $this->service = new SessionInfoService($this->client);
         $this->result = $this->service->apiSessioninfoGet();
     }
 
@@ -191,5 +175,3 @@ final class SessionInfoTest extends TestCase
         self::assertFalse($userAccessItemList[13]->isLoeschen());
     }
 }
-
-
