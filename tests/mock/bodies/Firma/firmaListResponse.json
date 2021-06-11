@@ -1,0 +1,18 @@
+{
+ "firmaListResponse": {
+  "ReturnData": {
+   "FirmaListItem": [
+    {
+     "Firma_ID": "74db4387590218686d9d3686",
+     "Bezeichnung": "Jane Doe",
+     "Zusatz": "Acme Inc."
+    },
+    {
+     "Firma_ID": "b4ff5c52ca6e686ddae17575",
+     "Bezeichnung": "John Doe",
+     "Zusatz": "FooBarBaz"
+    }
+   ]
+  }
+ }
+}

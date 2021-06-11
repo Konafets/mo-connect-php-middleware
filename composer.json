@@ -4,6 +4,7 @@
   "require": {
     "ext-json": "*",
     "vlucas/phpdotenv": "^5.3",
+    "nesbot/carbon": "^2.48",
     "guzzlehttp/guzzle": "^7.0"
   },
   "authors": [
