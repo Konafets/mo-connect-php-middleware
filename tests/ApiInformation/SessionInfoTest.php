@@ -9,7 +9,7 @@ final class SessionInfoTest extends BaseTest
 {
     protected SessionInfoService $service;
 
-    protected string $nameOfBodyMockFile = 'apisessioninfoGetResponse';
+    protected string $nameOfBodyMockFile = 'ApiInformation/apisessioninfoGetResponse';
 
     protected $result;
 

@@ -10,7 +10,7 @@ final class ApiInfoTest extends BaseTest
 {
     protected ApiInfoService $service;
 
-    protected string $nameOfBodyMockFile = 'apiInformation';
+    protected string $nameOfBodyMockFile = 'ApiInformation/apiInformation';
 
     protected ApiInfo $apiInfo;
 
