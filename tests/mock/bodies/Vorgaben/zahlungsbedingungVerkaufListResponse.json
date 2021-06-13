@@ -1,0 +1,80 @@
+{
+ "zahlungsbedingungVerkaufListResponse": {
+  "ReturnData": {
+   "ZahlungsBedingungVerkaufListItem": [
+    {
+     "Bezeichnung": "100% Vorkasse",
+     "Zahlungsart": 4,
+     "TageNetto": 0,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "50% Vorkasse",
+     "Zahlungsart": 4,
+     "TageNetto": 0,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "baldige Überweisung (informell)",
+     "Zahlungsart": 4,
+     "TageNetto": 14,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "Bar",
+     "Zahlungsart": 1,
+     "TageNetto": 14,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "Überweisung bis zum (10 Tage)",
+     "Zahlungsart": 4,
+     "TageNetto": 10,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "Überweisung bis zum (14 Tage)",
+     "Zahlungsart": 4,
+     "TageNetto": 14,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "Überweisung bis zum (20 Tage)",
+     "Zahlungsart": 4,
+     "TageNetto": 20,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "Überweisung sofort",
+     "Zahlungsart": 4,
+     "TageNetto": 0,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    },
+    {
+     "Bezeichnung": "Überweisung sofort mit Mahnungshinweis",
+     "Zahlungsart": 4,
+     "TageNetto": 0,
+     "TageSkonto": 0,
+     "ProzentSkonto": "0,00",
+     "NichtMahnen": false
+    }
+   ]
+  }
+ }
+}

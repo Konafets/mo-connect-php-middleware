@@ -5,7 +5,7 @@ namespace ArrobaIt\MoConnectApi\Models\Vorgaben;
 use ArrobaIt\MoConnectApi\Models\ResponseTrait;
 use stdClass;
 
-class KostenstelleListItem
+class SteuersatzListItem
 {
     use ResponseTrait;
 
@@ -13,13 +13,16 @@ class KostenstelleListItem
 
     protected string $beschreibung = '';
 
-    protected string $bemerkung = '';
+    protected string $steuersatz = '';
 
-    public function __construct(string $name, string $beschreibung, string $bemerkung)
+    protected bool $gesperrt = false;
+
+    public function __construct(string $name, string $beschreibung, string $steuersatz, bool $gesperrt)
     {
         $this->name = $name;
         $this->beschreibung = $beschreibung;
-        $this->bemerkung = $bemerkung;
+        $this->steuersatz = $steuersatz;
+        $this->gesperrt = $gesperrt;
     }
 
     public static function fromResponse(stdClass $response): self
@@ -29,7 +32,8 @@ class KostenstelleListItem
         return new self(
             $response->Name,
             $response->Beschreibung,
-            $response->Bemerkung,
+            $response->Steuersatz,
+            $response->Gesperrt,
         );
     }
 
@@ -53,13 +57,23 @@ class KostenstelleListItem
         $this->beschreibung = $beschreibung;
     }
 
-    public function getBemerkung(): string
+    public function getSteuersatz(): string
     {
-        return $this->bemerkung;
+        return $this->steuersatz;
     }
 
-    public function setBemerkung(string $bemerkung): void
+    public function setSteuersatz(string $steuersatz): void
     {
-        $this->bemerkung = $bemerkung;
+        $this->steuersatz = $steuersatz;
+    }
+
+    public function isGesperrt(): bool
+    {
+        return $this->gesperrt;
+    }
+
+    public function setGesperrt(bool $gesperrt): void
+    {
+        $this->gesperrt = $gesperrt;
     }
 }

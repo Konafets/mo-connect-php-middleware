@@ -1,0 +1,22 @@
+{
+ "zahlungsbedingungEinkaufListResponse": {
+  "ReturnData": {
+   "ZahlungsBedingungEinkaufListItem": [
+    {
+     "Bezeichnung": "Foo",
+     "Zahlungsart": 0,
+     "TageNetto": 10,
+     "TageSkonto": 5,
+     "ProzentSkonto": "0,5"
+    },
+    {
+     "Bezeichnung": "Bar",
+     "Zahlungsart": 1,
+     "TageNetto": 10,
+     "TageSkonto": 5,
+     "ProzentSkonto": "0,5"
+    }
+   ]
+  }
+ }
+}

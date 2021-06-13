@@ -1,0 +1,248 @@
+{
+ "steuersatzListResponse": {
+  "ReturnData": {
+   "SteuersatzListItem": [
+    {
+     "Name": "igE16",
+     "Beschreibung": "innerg. Erwerb 16% (USt- und VSt)",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE16 (§25b)",
+     "Beschreibung": "innerg. Erwerb 16% (USt- und VSt) letzter Abnehmer Dreiecksgeschäfte",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE16 Auslagerung",
+     "Beschreibung": "innerg. Erwerb 16% (USt- und VSt) Auslagerer als Steuerschuldner",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE16 Neufahrz.",
+     "Beschreibung": "innerg. Erwerb 16% Neufahrzeuge (USt- und VSt)",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE16 ohne VSt",
+     "Beschreibung": "innerg. Erwerb ohne VSt und 16% USt",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE19",
+     "Beschreibung": "innerg. Erwerb 19% (USt- und VSt)",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE19 (§25b)",
+     "Beschreibung": "innerg. Erwerb 19% (USt- und VSt) letzter Abnehmer Dreiecksgeschäfte",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE19 Auslagerung",
+     "Beschreibung": "innerg. Erwerb 19% (USt- und VSt) Auslagerer als Steuerschuldner",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE19 Neufahrz.",
+     "Beschreibung": "innerg. Erwerb 19% Neufahrzeuge (USt- und VSt)",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE19 ohne VSt",
+     "Beschreibung": "innerg. Erwerb ohne VSt und 19% USt",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE5",
+     "Beschreibung": "innerg. Erwerb 5% (USt- und VSt)",
+     "Steuersatz": "5,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE5 Auslagerung",
+     "Beschreibung": "innerg. Erwerb 5% (USt- und VSt) Auslagerer als Steuerschuldner",
+     "Steuersatz": "5,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE5 ohne VSt",
+     "Beschreibung": "innerg. Erwerb ohne VSt und 5% USt",
+     "Steuersatz": "5,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE7",
+     "Beschreibung": "innerg. Erwerb 7% (USt- und VSt)",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE7 Auslagerung",
+     "Beschreibung": "innerg. Erwerb 7% (USt- und VSt) Auslagerer als Steuerschuldner",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "igE7 ohne VSt",
+     "Beschreibung": "innerg. Erwerb ohne VSt und 7% USt",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt16",
+     "Beschreibung": "Umsatzsteuer 16%",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt16 (§13b)",
+     "Beschreibung": "USt und VSt 16% nach § 13b UStG",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt19",
+     "Beschreibung": "Umsatzsteuer 19%",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt19 (§13b) Ausland",
+     "Beschreibung": "USt und VSt 19% nach § 13b UStG Ausland",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt19 (§13b) Bauleist.",
+     "Beschreibung": "USt und VSt 19% nach § 13b UStG Bauleistungen",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt19 (§13b) sonst. Leist.",
+     "Beschreibung": "USt und VSt 19% nach § 13b UStG sonstige Leistungen",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt19 o. VSt (§13b) Ausl.",
+     "Beschreibung": "USt 19% ohne VSt nach § 13b UStG Leistung im Ausland ansässigen Unternehmers",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt19 o. VSt (§13b) Baul.",
+     "Beschreibung": "USt 19% ohne VSt nach § 13b UStG Bauleistungen",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt19 o. VSt (§13b) s. L.",
+     "Beschreibung": "USt 19% ohne VSt nach § 13b UStG sonstige Leistungen",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt5",
+     "Beschreibung": "Umsatzsteuer 5%",
+     "Steuersatz": "5,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt7",
+     "Beschreibung": "Umsatzsteuer 7%",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt7 (§13b) Ausland",
+     "Beschreibung": "USt und VSt 7% nach § 13b UStG Ausland",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt7 (§13b) Bauleist.",
+     "Beschreibung": "USt und VSt 7% nach § 13b UStG Bauleistungen",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt7 (§13b) sonst. Leist.",
+     "Beschreibung": "USt und VSt 7% nach § 13b UStG sonstige Leistungen",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt7 o. VSt (§13b) Ausl.",
+     "Beschreibung": "USt 7% ohne VSt nach § 13b UStG Leistung im Ausland ansässigen Unternehmers",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt7 o. VSt (§13b) Baul.",
+     "Beschreibung": "USt 7% ohne VSt nach § 13b UStG Bauleistungen",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "USt7 o. VSt (§13b) s. L.",
+     "Beschreibung": "USt 7% ohne VSt nach § 13b UStG sonstige Leistungen",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "VSt16",
+     "Beschreibung": "Vorsteuer 16%",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "VSt16 (Bew)",
+     "Beschreibung": "Vorsteuer 16% (Bewirtung 70% abziehbar)",
+     "Steuersatz": "16,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "VSt19",
+     "Beschreibung": "Vorsteuer 19%",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "VSt19 (Bew)",
+     "Beschreibung": "Vorsteuer 19% (Bewirtung 70% abziehbar)",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "VSt19 (PKW)",
+     "Beschreibung": "Vorsteuer 19% (PKW: 50% VSt abziehbar)",
+     "Steuersatz": "19,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "VSt5",
+     "Beschreibung": "Vorsteuer 5%",
+     "Steuersatz": "5,00",
+     "Gesperrt": false
+    },
+    {
+     "Name": "VSt7",
+     "Beschreibung": "Vorsteuer 7%",
+     "Steuersatz": "7,00",
+     "Gesperrt": false
+    }
+   ]
+  }
+ }
+}

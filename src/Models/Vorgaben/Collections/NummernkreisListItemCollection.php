@@ -3,15 +3,15 @@
 namespace ArrobaIt\MoConnectApi\Models\Vorgaben\Collections;
 
 use ArrayAccess;
-use ArrobaIt\MoConnectApi\Models\Vorgaben\KostenstelleListItem;
+use ArrobaIt\MoConnectApi\Models\Vorgaben\NummernkreisListItem;
 use Iterator;
 
-class KostenstelleListItemCollection implements ArrayAccess, Iterator
+class NummernkreisListItemCollection implements ArrayAccess, Iterator
 {
     protected int $position = 0;
 
     /**
-     * @var KostenstelleListItem[]
+     * @var NummernkreisListItem[]
      */
     protected array $items = [];
 
@@ -20,11 +20,11 @@ class KostenstelleListItemCollection implements ArrayAccess, Iterator
         $this->items = $items;
     }
 
-    public static function fromResponse(array $kostenstelleListItems): self
+    public static function fromResponse(array $nummernkreisListItems): self
     {
         $items = array_map(static fn($item) =>
-            KostenstelleListItem::fromResponse($item),
-            $kostenstelleListItems
+            NummernkreisListItem::fromResponse($item),
+            $nummernkreisListItems
         );
 
         return new self($items);
@@ -35,7 +35,7 @@ class KostenstelleListItemCollection implements ArrayAccess, Iterator
         return isset($this->items[$offset]);
     }
 
-    public function offsetGet($offset): ?KostenstelleListItem
+    public function offsetGet($offset): ?NummernkreisListItem
     {
         return $this->offsetExists($offset) ? $this->items[$offset] : null;
     }

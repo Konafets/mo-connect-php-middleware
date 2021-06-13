@@ -5,6 +5,7 @@ namespace ArrobaIt\MoConnectApi\Services\Vorgaben;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\Collections\KostenstelleListItemCollection;
 use ArrobaIt\MoConnectApi\Services\BaseService;
 use GuzzleHttp\Exception\GuzzleException;
+use JsonException;
 
 class KostenstellenListService extends BaseService
 {
@@ -16,8 +17,10 @@ class KostenstellenListService extends BaseService
 
         try {
             $response = $this->client->send($request);
-            return KostenstelleListItemCollection::fromResponse($response->kostenstellenListResponse->ReturnData);
-        } catch (\JsonException | GuzzleException $e) {
+            return KostenstelleListItemCollection::fromResponse(
+                $response->kostenstellenListResponse->ReturnData->KostenstelleListItem
+            );
+        } catch (JsonException | GuzzleException $e) {
         }
     }
 }

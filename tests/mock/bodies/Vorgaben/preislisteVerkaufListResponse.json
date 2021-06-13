@@ -1,0 +1,40 @@
+{
+ "preislisteVerkaufListResponse": {
+  "ReturnData": {
+   "VerkaufpreislisteListItem": [
+    {
+     "VKPreisliste_ID": "42",
+     "Bezeichnung": "Foo",
+     "Beschreibung": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.",
+     "Standard": true,
+     "BerechnungArt": 1,
+     "MargeArt": 1
+    },
+    {
+     "VKPreisliste_ID": "5",
+     "Bezeichnung": "Bar",
+     "Beschreibung": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.",
+     "Standard": false,
+     "BerechnungArt": 2,
+     "MargeArt": 2
+    },
+    {
+     "VKPreisliste_ID": "6",
+     "Bezeichnung": "Baz",
+     "Beschreibung": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.",
+     "Standard": false,
+     "BerechnungArt": 3,
+     "MargeArt": 3
+    },
+    {
+     "VKPreisliste_ID": "7",
+     "Bezeichnung": "FooBar",
+     "Beschreibung": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.",
+     "Standard": false,
+     "BerechnungArt": 3,
+     "MargeArt": 4
+    }
+   ]
+  }
+ }
+}

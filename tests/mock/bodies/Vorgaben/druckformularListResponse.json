@@ -1,0 +1,36 @@
+{
+ "druckformularListResponse": {
+  "ReturnData": {
+   "DruckFormularListItem": [
+    {
+     "DruckformularName": "Auftragsformular universal A4 hoch",
+     "DruckformularGruppe": 1008
+    },
+    {
+     "DruckformularName": "Auftragsformular universal A4 hoch, KEA_MOSS",
+     "DruckformularGruppe": 1008
+    },
+    {
+     "DruckformularName": "Bestellformular universal A4 hoch",
+     "DruckformularGruppe": 1014
+    },
+    {
+     "DruckformularName": "Anschreiben SEPA Mitteilung",
+     "DruckformularGruppe": 1017
+    },
+    {
+     "DruckformularName": "Einmallastschrift",
+     "DruckformularGruppe": 1017
+    },
+    {
+     "DruckformularName": "Lastschriftsmandat, abweichender Schuldner",
+     "DruckformularGruppe": 1017
+    },
+    {
+     "DruckformularName": "Wiederkehrenden Lastschrift",
+     "DruckformularGruppe": 1017
+    }
+   ]
+  }
+ }
+}

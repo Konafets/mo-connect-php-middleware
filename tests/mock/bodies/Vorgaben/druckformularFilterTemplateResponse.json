@@ -1,0 +1,10 @@
+{
+ "druckformularFilterTemplateResponse": {
+  "ReturnData": {
+   "DruckFormularFilter": {
+    "Suchtext": "FooBarBaz",
+    "DruckformularGruppe": "42"
+   }
+  }
+ }
+}

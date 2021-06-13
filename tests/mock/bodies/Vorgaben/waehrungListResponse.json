@@ -1,0 +1,23 @@
+{
+ "waehrungListResponse": {
+  "ReturnData": {
+   "WaehrungListItem": [
+    {
+     "Name": "Schweizer Franken",
+     "Isocode": "CHF",
+     "Kurs": "1,55210000"
+    },
+    {
+     "Name": "Euro",
+     "Isocode": "EUR",
+     "Kurs": "1,00000000"
+    },
+    {
+     "Name": "US-Dollar",
+     "Isocode": "USD",
+     "Kurs": "1,12054000"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,148 @@
+{
+ "nummernkreisListResponse": {
+  "ReturnData": {
+   "NummernkreisListItem": [
+    {
+     "NKIdent": 8,
+     "Gruppe": "Stammdaten",
+     "Bereich": "Adresse",
+     "Aktuell": "ADR-000000",
+     "Nachfolger": "ADR-000001"
+    },
+    {
+     "NKIdent": 6,
+     "Gruppe": "Stammdaten",
+     "Bereich": "Artikel",
+     "Aktuell": "ART-000000",
+     "Nachfolger": "ART-000001"
+    },
+    {
+     "NKIdent": 7,
+     "Gruppe": "Stammdaten",
+     "Bereich": "Leistung",
+     "Aktuell": "LST-000000",
+     "Nachfolger": "LST-000001"
+    },
+    {
+     "NKIdent": 1,
+     "Gruppe": "Verkauf",
+     "Bereich": "Angebot",
+     "Aktuell": "AN-2021-0000",
+     "Nachfolger": "AN-2021-0001"
+    },
+    {
+     "NKIdent": 2,
+     "Gruppe": "Verkauf",
+     "Bereich": "Auftragsbestätigung",
+     "Aktuell": "AB-2021-0000",
+     "Nachfolger": "AB-2021-0001"
+    },
+    {
+     "NKIdent": 3,
+     "Gruppe": "Verkauf",
+     "Bereich": "Lieferschein",
+     "Aktuell": "LS-2021-0000",
+     "Nachfolger": "LS-2021-0001"
+    },
+    {
+     "NKIdent": 4,
+     "Gruppe": "Verkauf",
+     "Bereich": "Rechnung",
+     "Aktuell": "RG-2021-0000",
+     "Nachfolger": "RG-2021-0001"
+    },
+    {
+     "NKIdent": 5,
+     "Gruppe": "Verkauf",
+     "Bereich": "Korrekturrechnung",
+     "Aktuell": "KR-2021-0000",
+     "Nachfolger": "KR-2021-0001"
+    },
+    {
+     "NKIdent": 9,
+     "Gruppe": "Verkauf",
+     "Bereich": "Abschlagsrechnung",
+     "Aktuell": "AR-2021-0000",
+     "Nachfolger": "AR-2021-0001"
+    },
+    {
+     "NKIdent": 17,
+     "Gruppe": "Verkauf",
+     "Bereich": "Proformarechnung",
+     "Aktuell": "PR-2021-0000",
+     "Nachfolger": "PR-2021-0001"
+    },
+    {
+     "NKIdent": 10,
+     "Gruppe": "Einkauf",
+     "Bereich": "Bestellanfrage",
+     "Aktuell": "BA-2021-0000",
+     "Nachfolger": "BA-2021-0001"
+    },
+    {
+     "NKIdent": 11,
+     "Gruppe": "Einkauf",
+     "Bereich": "Bestellung",
+     "Aktuell": "BE-2021-0000",
+     "Nachfolger": "BE-2021-0001"
+    },
+    {
+     "NKIdent": 12,
+     "Gruppe": "Einkauf",
+     "Bereich": "Wareneingang",
+     "Aktuell": "WE-2021-0000",
+     "Nachfolger": "WE-2021-0001"
+    },
+    {
+     "NKIdent": 13,
+     "Gruppe": "Einkauf",
+     "Bereich": "Eingangsrechnung",
+     "Aktuell": "ER-2021-0000",
+     "Nachfolger": "ER-2021-0001"
+    },
+    {
+     "NKIdent": 14,
+     "Gruppe": "Einkauf",
+     "Bereich": "Lieferantengutschrift",
+     "Aktuell": "LG-2021-0000",
+     "Nachfolger": "LG-2021-0001"
+    },
+    {
+     "NKIdent": 15,
+     "Gruppe": "Einkauf",
+     "Bereich": "Rücksendung",
+     "Aktuell": "RS-2021-0000",
+     "Nachfolger": "RS-2021-0001"
+    },
+    {
+     "NKIdent": 16,
+     "Gruppe": "Einkauf",
+     "Bereich": "Storno",
+     "Aktuell": "ES-2021-0000",
+     "Nachfolger": "ES-2021-0001"
+    },
+    {
+     "NKIdent": 20,
+     "Gruppe": "",
+     "Bereich": "",
+     "Aktuell": "DEB-0000",
+     "Nachfolger": "DEB-0001"
+    },
+    {
+     "NKIdent": 21,
+     "Gruppe": "",
+     "Bereich": "",
+     "Aktuell": "KRED-0000",
+     "Nachfolger": "KRED-0001"
+    },
+    {
+     "NKIdent": 19,
+     "Gruppe": "Buchhaltung",
+     "Bereich": "Buchung",
+     "Aktuell": "0",
+     "Nachfolger": "1"
+    }
+   ]
+  }
+ }
+}
