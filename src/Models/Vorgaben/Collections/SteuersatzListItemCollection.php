@@ -3,18 +3,13 @@
 namespace ArrobaIt\MoConnectApi\Models\Vorgaben\Collections;
 
 use ArrayAccess;
+use ArrobaIt\MoConnectApi\Models\Collection;
+use ArrobaIt\MoConnectApi\Models\Vorgaben\KostenstelleListItem;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\SteuersatzListItem;
 use Iterator;
 
-class SteuersatzListItemCollection implements ArrayAccess, Iterator
+class SteuersatzListItemCollection extends Collection
 {
-    protected int $position = 0;
-
-    /**
-     * @var SteuersatzListItem[]
-     */
-    protected array $items = [];
-
     public function __construct(array $items = [])
     {
         $this->items = $items;
@@ -30,52 +25,8 @@ class SteuersatzListItemCollection implements ArrayAccess, Iterator
         return new self($items);
     }
 
-    public function offsetExists($offset): bool
-    {
-        return isset($this->items[$offset]);
-    }
-
     public function offsetGet($offset): ?SteuersatzListItem
     {
-        return $this->offsetExists($offset) ? $this->items[$offset] : null;
-    }
-
-    public function offsetSet($offset, $value): void
-    {
-        if (is_null($offset)) {
-             $this->items[] = $value;
-         } else {
-             $this->items[$offset] = $value;
-         }
-    }
-
-    public function offsetUnset($offset): void
-    {
-        unset($this->items[$offset]);
-    }
-
-    public function current()
-    {
-        return $this->items[$this->position];
-    }
-
-    public function next(): void
-    {
-        $this->position++;
-    }
-
-    public function key(): int
-    {
-        return $this->position;
-    }
-
-    public function valid(): bool
-    {
-        return isset($this->items[$this->position]);
-    }
-
-    public function rewind(): void
-    {
-        $this->position = 0;
+        return parent::offsetGet($offset);
     }
 }
