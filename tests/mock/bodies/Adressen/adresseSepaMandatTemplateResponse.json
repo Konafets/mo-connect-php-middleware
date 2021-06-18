@@ -1,0 +1,17 @@
+{
+ "adresseSepaMandatTemplateResponse": {
+  "ReturnData": {
+   "SepaMandatAddItem": {
+    "Adresse_ID": "480C644B85E2297DB23598BF44130C",
+    "MandatReferenz": "",
+    "MandatArt": 1,
+    "MandatTyp": 1,
+    "MandatStatus": 1,
+    "Einreichfrist": 14,
+    "GueltigAb": "",
+    "GueltigBis": "",
+    "AktiviertBis": ""
+   }
+  }
+ }
+}

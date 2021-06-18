@@ -1,0 +1,14 @@
+{
+ "adresseAnsprechpartnerGetResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 1,
+    "StatustextItem": [
+     {
+      "Statustext": "Ansprechpartner ID ungültig"
+     }
+    ]
+   }
+  }
+ }
+}

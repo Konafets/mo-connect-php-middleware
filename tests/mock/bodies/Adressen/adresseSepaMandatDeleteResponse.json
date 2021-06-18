@@ -1,0 +1,14 @@
+{
+ "adresseSepaMandatDeleteResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 1,
+    "StatustextItem": [
+     {
+      "Statustext": "Sepamandat ID ungültig"
+     }
+    ]
+   }
+  }
+ }
+}

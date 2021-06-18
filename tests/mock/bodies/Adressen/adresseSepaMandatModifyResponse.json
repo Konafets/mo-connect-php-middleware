@@ -1,0 +1,14 @@
+{
+ "adresseSepaMandatModifyResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 1,
+    "StatustextItem": [
+     {
+      "Statustext": "Parameterfehler"
+     }
+    ]
+   }
+  }
+ }
+}

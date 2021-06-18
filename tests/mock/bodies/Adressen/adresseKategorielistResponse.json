@@ -1,0 +1,20 @@
+{
+ "adresseKategorielistResponse": {
+  "ReturnData": {
+   "AdresseKategorieItem": [
+    {
+     "Name": "EDV-Leistungen ehrenamtlich"
+    },
+    {
+     "Name": "EDV-Leistungen für Geld"
+    },
+    {
+     "Name": "Händler"
+    },
+    {
+     "Name": "Mac OS X-Adressbuch"
+    }
+   ]
+  }
+ }
+}

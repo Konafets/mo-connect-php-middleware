@@ -17,6 +17,11 @@ class BaseTest extends TestCase
 
     public function setUp(): void
     {
+        $this->createMockClient();
+    }
+
+    protected function createMockClient(): void
+    {
         $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
         $dotenv->load();
 
@@ -30,5 +35,6 @@ class BaseTest extends TestCase
 
         $this->client = new Client($_ENV['USERNAME'], $_ENV['PASSWORD'], $_ENV['COMPANY_ID'], $handlerStack);
     }
+
 }
 
