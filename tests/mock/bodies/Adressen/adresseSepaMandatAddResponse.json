@@ -1,0 +1,15 @@
+{
+ "adresseSepaMandatAddResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 1,
+    "StatustextItem": [
+     {
+      "Statustext": "Das Sepamandat konnte nicht angelegt werden!"
+     }
+    ],
+    "Insert_ID": ""
+   }
+  }
+ }
+}

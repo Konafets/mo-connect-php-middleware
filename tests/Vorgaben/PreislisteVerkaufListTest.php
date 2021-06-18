@@ -10,7 +10,9 @@ final class PreislisteVerkaufListTest extends BaseTest
 {
     protected PreislisteVerkaufListService $service;
 
-    protected string $nameOfBodyMockFile = 'Vorgaben/preislisteVerkaufListResponse';
+    protected array $mockReponseBodies = [
+        'Vorgaben/preislisteVerkaufListResponse',
+    ];
 
     protected VerkaufpreislisteListItemCollection $result;
 

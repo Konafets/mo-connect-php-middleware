@@ -10,7 +10,9 @@ final class ZahlungsbedingungEinkaufListTest extends BaseTest
 {
     protected ZahlungsbedingungEinkaufListService $service;
 
-    protected string $nameOfBodyMockFile = 'Vorgaben/zahlungsbedingungEinkaufListResponse';
+    protected array $mockReponseBodies = [
+        'Vorgaben/zahlungsbedingungEinkaufListResponse',
+    ];
 
     protected ZahlungsBedingungEinkaufListItemCollection $result;
 

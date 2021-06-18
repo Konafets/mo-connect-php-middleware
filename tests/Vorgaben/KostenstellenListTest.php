@@ -10,7 +10,9 @@ final class KostenstellenListTest extends BaseTest
 {
     protected KostenstellenListService $service;
 
-    protected string $nameOfBodyMockFile = 'Vorgaben/kostenstellenListResponse';
+    protected array $mockReponseBodies = [
+        'Vorgaben/kostenstellenListResponse',
+    ];
 
     protected KostenstelleListItemCollection $result;
 

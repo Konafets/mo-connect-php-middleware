@@ -1,0 +1,31 @@
+{
+ "adresseAnsprechpartnerTemplateResponse": {
+  "ReturnData": {
+   "AnsprechpartnerAddItem": {
+    "Adresse_ID": "480C644B85E2297DB23598B54E130C",
+    "Abteilung": "",
+    "Position": "",
+    "Vorname": "",
+    "Nachname": "",
+    "EmailFirma": "",
+    "EmailPrivat": "",
+    "TelefonFirma": "",
+    "TelefonMobil": "",
+    "TelefonPrivat": "",
+    "Anrede": "",
+    "Geschlecht": "",
+    "Geburtsdatum": "",
+    "Briefanrede": "",
+    "Zusatz": "",
+    "Bemerkung": "",
+    "KontaktRollenList": {
+     "KontaktRolleItem": [
+      {
+       "KontaktRolle": 0
+      }
+     ]
+    }
+   }
+  }
+ }
+}

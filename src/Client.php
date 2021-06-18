@@ -16,7 +16,7 @@ class Client
 
     protected string $moApiFirma;
 
-    public function __construct(string $username, string $password, string $company = '', HandlerStack $handler = null)
+    public function __construct(string $username, string $password, string $company = '', HandlerStack $handler = null, $options = [])
     {
         $headers['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -34,6 +34,8 @@ class Client
             ],
             'headers' => $headers,
         ];
+
+        $config = array_merge_recursive($config, $options);
 
         if ($handler instanceof HandlerStack) {
             $config['handler'] = $handler;
@@ -112,7 +114,6 @@ class Client
         return '';
     }
 
-
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
@@ -127,18 +128,5 @@ class Client
         if ($response->getStatusCode() === 200) {
             return json_decode($response->getBody()->getContents(), false, 512, JSON_THROW_ON_ERROR);
         }
-    }
-
-    protected static function decodeParameter($in)
-    {
-        if ($in instanceof Client) {
-            $return = json_encode($in->getContent());
-        } elseif ($in === '') {
-            $return = '""';
-        } else {
-            $return = $in;
-        }
-
-        return $return;
     }
 }

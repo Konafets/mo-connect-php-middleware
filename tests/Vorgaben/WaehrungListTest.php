@@ -10,7 +10,9 @@ final class WaehrungListTest extends BaseTest
 {
     protected WaehrungListService $service;
 
-    protected string $nameOfBodyMockFile = 'Vorgaben/waehrungListResponse';
+    protected array $mockReponseBodies = [
+        'Vorgaben/waehrungListResponse',
+    ];
 
     protected WaehrungListItemCollection $result;
 

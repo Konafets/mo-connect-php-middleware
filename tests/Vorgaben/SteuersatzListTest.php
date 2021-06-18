@@ -10,7 +10,9 @@ final class SteuersatzListTest extends BaseTest
 {
     protected SteuersatzListService $service;
 
-    protected string $nameOfBodyMockFile = 'Vorgaben/steuersatzListResponse';
+    protected array $mockReponseBodies = [
+        'Vorgaben/steuersatzListResponse',
+    ];
 
     protected SteuersatzListItemCollection $result;
 

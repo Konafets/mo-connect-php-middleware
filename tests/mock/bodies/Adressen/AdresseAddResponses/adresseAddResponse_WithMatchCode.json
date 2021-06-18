@@ -1,0 +1,11 @@
+{
+ "adresseAddResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 0,
+    "Statustext": "",
+    "Insert_ID": "480C644B85E2297DB23598B6461903A3"
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "adresseListResponse": {
+  "ReturnData": {
+   "AdresseListItem": [
+    {
+     "Adresse_ID": "480C644B85E2297DB23598B347130C",
+     "Matchcode": "FOO",
+     "AdressNr": "ADR-00002",
+     "Kategorie": "EDV-Leistungen für Geld",
+     "KundenStatus": 1,
+     "LieferantenStatus": 0,
+     "RA_Firma1": "Foo Bar",
+     "RA_Vorname": "Foo",
+     "RA_Nachname": "Bar",
+     "RA_Plz": "12345",
+     "RA_Ort": "Welt",
+     "RA_Strasse": "Norden",
+     "RA_StrasseNr": "42"
+    }
+   ]
+  }
+ }
+}

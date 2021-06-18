@@ -1,0 +1,11 @@
+{
+ "adresseAddAttachmentResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 0,
+    "Statustext": "",
+    "Insert_ID": "481C624F95F921479505FDCE32130BA3E2236C"
+   }
+  }
+ }
+}

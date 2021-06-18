@@ -1,0 +1,13 @@
+{
+ "adresseFilterTemplateResponse": {
+  "ReturnData": {
+   "AdresseFilter": {
+    "Suchtext": "Foo",
+    "Matchcode": "FOOBARBAZ",
+    "AdresseKategorie": "1",
+    "LieferantenStatus": "-2",
+    "KundenStatus": "1"
+   }
+  }
+ }
+}

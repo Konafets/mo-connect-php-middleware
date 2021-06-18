@@ -25,18 +25,4 @@ trait ResponseTrait
     {
         return ($this->hasContent() && isset($this->getContent()->ReturnStatus));
     }
-
-    public function getStatusCode(): int
-    {
-        if ($this->hasStatus()) {
-            return $this->getContent()->ReturnStatus->StatusCode;
-        }
-
-        return 0;
-    }
-
-    public function isStatusOk(): bool
-    {
-        return ($this->hasStatus() && $this->getStatusCode() === 0);
-    }
 }

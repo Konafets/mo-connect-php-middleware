@@ -10,7 +10,9 @@ final class NummernkreisListTest extends BaseTest
 {
     protected NummernkreisListService $service;
 
-    protected string $nameOfBodyMockFile = 'Vorgaben/nummernkreisListResponse';
+    protected array $mockReponseBodies = [
+        'Vorgaben/nummernkreisListResponse',
+    ];
 
     protected NummernkreisListItemCollection $result;
 

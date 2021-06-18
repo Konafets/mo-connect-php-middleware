@@ -13,22 +13,30 @@ class BaseTest extends TestCase
 {
     protected Client $client;
 
-    protected string $nameOfBodyMockFile = '';
+    protected array $mockReponseBodies = [];
 
     public function setUp(): void
+    {
+        $this->createMockClient();
+    }
+
+    protected function createMockClient(): void
     {
         $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
         $dotenv->load();
 
-        $mockResponse = file_get_contents(__DIR__ . '/mock/bodies/' . $this->nameOfBodyMockFile . '.json');
+        $mockResponses = array_map(function ($mockReponseBody) {
+            $body = file_get_contents(__DIR__ . '/mock/bodies/' . $mockReponseBody . '.json');
 
-        $mock = new MockHandler([
-            new Response(200, [], $mockResponse),
-        ]);
+            return new Response(200, [], $body);
+        }, $this->mockReponseBodies);
+
+        $mock = new MockHandler($mockResponses);
 
         $handlerStack = HandlerStack::create($mock);
 
         $this->client = new Client($_ENV['USERNAME'], $_ENV['PASSWORD'], $_ENV['COMPANY_ID'], $handlerStack);
     }
+
 }
 

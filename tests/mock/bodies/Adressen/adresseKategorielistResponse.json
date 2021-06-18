@@ -1,0 +1,17 @@
+{
+ "adresseKategorielistResponse": {
+  "ReturnData": {
+   "AdresseKategorieItem": [
+    {
+     "Name": "Foo"
+    },
+    {
+     "Name": "Bar"
+    },
+    {
+     "Name": "Baz"
+    }
+   ]
+  }
+ }
+}

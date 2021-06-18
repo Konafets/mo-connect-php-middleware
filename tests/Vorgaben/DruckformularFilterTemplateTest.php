@@ -10,7 +10,9 @@ final class DruckformularFilterTemplateTest extends BaseTest
 {
     protected DruckformularFilterTemplateService $service;
 
-    protected string $nameOfBodyMockFile = 'Vorgaben/druckformularFilterTemplateResponse';
+    protected array $mockReponseBodies = [
+        'Vorgaben/druckformularFilterTemplateResponse',
+    ];
 
     protected DruckformularFilter $result;
 

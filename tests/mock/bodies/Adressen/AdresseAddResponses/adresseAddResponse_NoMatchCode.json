@@ -1,0 +1,21 @@
+{
+ "adresseAddResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 1,
+    "StatustextItem": [
+     {
+      "Statustext": "Datensatzprüfung (Tabelle ADRESSE, Zeile 0): Der Matchcode ist nicht vorhanden!"
+     },
+     {
+      "Statustext": "Datenbankfehler (Tabelle ADRESSE): Datensatz konnte nicht erzeugt werden."
+     },
+     {
+      "Statustext": "Die Adresse konnte nicht gesichert werden!"
+     }
+    ],
+    "Insert_ID": ""
+   }
+  }
+ }
+}

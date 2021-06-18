@@ -47,6 +47,6 @@ class Zahlungsart
 
     public function getBechreibung(): string
     {
-        return isset(self::METHODS[$this->getArt()]) ? self::METHODS[$this->getArt()] : '';
+        return self::METHODS[$this->getArt()] ?? '';
     }
 }

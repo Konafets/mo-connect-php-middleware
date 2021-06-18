@@ -1,0 +1,14 @@
+{
+ "adresseDeleteResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 1,
+    "StatustextItem": [
+     {
+      "Statustext": "Adresse ID ungültig"
+     }
+    ]
+   }
+  }
+ }
+}
