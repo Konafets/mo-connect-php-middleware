@@ -6,7 +6,8 @@
     "vlucas/phpdotenv": "^5.3",
     "nesbot/carbon": "^2.48",
     "guzzlehttp/guzzle": "^7.0",
-    "illuminate/collections": "^8.47"
+    "illuminate/collections": "^8.47",
+    "ext-curl": "*"
   },
   "authors": [
     {
