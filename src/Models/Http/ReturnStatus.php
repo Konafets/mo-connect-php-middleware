@@ -71,6 +71,26 @@ class ReturnStatus
         return $this->statuscode->isOk();
     }
 
+    public function isCommonError(): bool
+    {
+        return $this->statuscode->isCommonError();
+    }
+
+    public function isAccessError(): bool
+    {
+        return $this->statuscode->isAccessError();
+    }
+
+    public function isFunctionUnknown(): bool
+    {
+        return $this->statuscode->isFunctionUnknown();
+    }
+
+    public function isParameterError(): bool
+    {
+        return $this->statuscode->isParameterError();
+    }
+
     public function getStatusMessage(): string
     {
         $message = $this->getStatustextItems()->map(function(StatustextItem $item) {
