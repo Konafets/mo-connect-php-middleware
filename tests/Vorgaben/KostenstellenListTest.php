@@ -10,7 +10,7 @@ final class KostenstellenListTest extends BaseTest
 {
     protected KostenstellenListService $service;
 
-    protected array $mockReponseBodies = [
+    protected array $mockResponseBodies = [
         'Vorgaben/kostenstellenListResponse',
     ];
 

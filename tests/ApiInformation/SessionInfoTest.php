@@ -9,7 +9,7 @@ final class SessionInfoTest extends BaseTest
 {
     protected SessionInfoService $service;
 
-    protected array $mockReponseBodies = [
+    protected array $mockResponseBodies = [
         'ApiInformation/apisessioninfoGetResponse'
     ];
 

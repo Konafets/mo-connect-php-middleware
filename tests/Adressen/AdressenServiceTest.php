@@ -21,7 +21,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function adressFilterTemplate(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseFilterTemplateResponse',
         ];
         $this->createMockClient();
@@ -42,7 +42,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function getAdressenListWithoutFilter(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseListResponseWithoutFilter',
         ];
         $this->createMockClient();
@@ -74,7 +74,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function getAdressenListWithFilter(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseListResponseWithFilter',
         ];
         $this->createMockClient();
@@ -109,7 +109,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function adresseGet(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseGetResponse',
         ];
         $this->createMockClient();
@@ -217,7 +217,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function addAdressWithOutMatchCode(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/AdresseAddResponses/adresseAddResponse_NoMatchCode',
         ];
         $this->createMockClient();
@@ -243,7 +243,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function addAdressWithMatchCode(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/AdresseAddResponses/adresseAddResponse_WithMatchCode',
         ];
         $this->createMockClient();
@@ -272,7 +272,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function adresseModify(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseGetResponse',
             'Adressen/adresseModifyResponse',
         ];
@@ -299,7 +299,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function adresseDelete(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseDeleteResponse_invalidId',
             'Adressen/adresseDeleteResponse_valid',
         ];
@@ -321,7 +321,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function adresseTemplate(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseTemplateResponse',
         ];
         $this->createMockClient();
@@ -339,7 +339,7 @@ final class AdressenServiceTest extends BaseTest
      */
     public function adresseKategorieList(): void
     {
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseKategorieListResponse',
         ];
         $this->createMockClient();
@@ -358,7 +358,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseAddAttachment(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseAddAttachmentResponse',
         ];
         $this->createMockClient();
@@ -373,7 +373,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseAnsprechpartnerTemplate(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseAnsprechpartnerTemplateResponse',
         ];
         $this->createMockClient();
@@ -388,7 +388,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseAnsprechpartnerList(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseAnsprechpartnerListResponse',
         ];
         $this->createMockClient();
@@ -403,7 +403,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseAnsprechpartnerAdd(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseAnsprechpartnerAddResponse',
         ];
         $this->createMockClient();
@@ -418,7 +418,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseAnsprechpartnerGet(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseAnsprechpartnerGetResponse',
         ];
         $this->createMockClient();
@@ -433,7 +433,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseAnsprechpartnerModify(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseAnsprechpartnerModifyResponse',
         ];
         $this->createMockClient();
@@ -448,7 +448,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseAnsprechpartnerDelete(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseAnsprechpartnerDeleteResponse',
         ];
         $this->createMockClient();
@@ -463,7 +463,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseSepaMandatList(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseSepaMandatListResponse',
         ];
         $this->createMockClient();
@@ -478,7 +478,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseSepaMandatTemplate(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseSepaMandatTemplateResponse',
         ];
         $this->createMockClient();
@@ -493,7 +493,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseSepaMandatAdd(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseSepaMandatAddResponse',
         ];
         $this->createMockClient();
@@ -508,7 +508,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseSepaMandatGet(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseSepaMandatGetResponse',
         ];
         $this->createMockClient();
@@ -523,7 +523,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseSepaMandatModify(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseSepaMandatModifyResponse',
         ];
         $this->createMockClient();
@@ -538,7 +538,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseSepaMandatDelete(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseSepaMandatDeleteResponse',
         ];
         $this->createMockClient();
@@ -553,7 +553,7 @@ final class AdressenServiceTest extends BaseTest
     public function adresseSepaMandatPrintPDF(): void
     {
         self::markTestIncomplete();
-        $this->mockReponseBodies = [
+        $this->mockResponseBodies = [
             'Adressen/adresseSepaMandatPrintPDFResponse',
         ];
         $this->createMockClient();

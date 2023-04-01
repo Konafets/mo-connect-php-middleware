@@ -10,7 +10,7 @@ final class FirmaItemTest extends BaseTest
 {
     protected FirmaItemService $service;
 
-    protected array $mockReponseBodies = [
+    protected array $mockResponseBodies = [
         'Firma/firmaGetResponse'
     ];
 

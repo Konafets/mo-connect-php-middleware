@@ -13,7 +13,7 @@ class BaseTest extends TestCase
 {
     protected Client $client;
 
-    protected array $mockReponseBodies = [];
+    protected array $mockResponseBodies = [];
 
     public function setUp(): void
     {
@@ -25,11 +25,11 @@ class BaseTest extends TestCase
         $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
         $dotenv->load();
 
-        $mockResponses = array_map(function ($mockReponseBody) {
-            $body = file_get_contents(__DIR__ . '/mock/bodies/' . $mockReponseBody . '.json');
+        $mockResponses = array_map(static function ($mockResponseBody) {
+            $body = file_get_contents(__DIR__ . '/mock/bodies/' . $mockResponseBody . '.json');
 
             return new Response(200, [], $body);
-        }, $this->mockReponseBodies);
+        }, $this->mockResponseBodies);
 
         $mock = new MockHandler($mockResponses);
 
@@ -37,6 +37,5 @@ class BaseTest extends TestCase
 
         $this->client = new Client($_ENV['USERNAME'], $_ENV['PASSWORD'], $_ENV['COMPANY_ID'], $handlerStack);
     }
-
 }
 

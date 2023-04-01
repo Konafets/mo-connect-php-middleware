@@ -10,7 +10,7 @@ final class ZahlungsbedingungVerkaufListTest extends BaseTest
 {
     protected ZahlungsbedingungVerkaufListService $service;
 
-    protected array $mockReponseBodies = [
+    protected array $mockResponseBodies = [
         'Vorgaben/zahlungsbedingungVerkaufListResponse',
     ];
 

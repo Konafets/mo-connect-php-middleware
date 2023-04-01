@@ -10,7 +10,7 @@ final class DruckformularListTest extends BaseTest
 {
     protected DruckformularListService $service;
 
-    protected array $mockReponseBodies = [
+    protected array $mockResponseBodies = [
         'Vorgaben/druckformularListResponse',
     ];
 
