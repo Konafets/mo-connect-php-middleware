@@ -1357,5 +1357,7 @@ class AdresseItem
             'Notizen' => $this->getNotizen(),
             'Mail_Preferred' => $this->isMailPreferred(),
         ];
+
+        return array_filter($result);
     }
 }
