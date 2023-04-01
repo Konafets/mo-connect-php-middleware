@@ -5,6 +5,13 @@ namespace ArrobaIt\MoConnectApi\Models\Vorgaben;
 use ArrobaIt\MoConnectApi\Models\ResponseTrait;
 use stdClass;
 
+/**
+ * Class NummernkreisIdents
+ *
+ * @package ArrobaIt\MoConnectApi\Models\Vorgaben
+ * @author Stefano Kowalke <info@arroba-it.de>
+ * @todo Add methods which returns the string representation of the idents
+ */
 class NummernkreisIdents
 {
     use ResponseTrait;
