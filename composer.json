@@ -3,10 +3,10 @@
   "type": "library",
   "require": {
     "ext-json": "*",
-    "vlucas/phpdotenv": "^5.3",
-    "nesbot/carbon": "^2.48",
-    "guzzlehttp/guzzle": "^7.0",
-    "illuminate/collections": "^8.47"
+    "vlucas/phpdotenv": "^v5.5.0",
+    "nesbot/carbon": "^2.66",
+    "guzzlehttp/guzzle": "^7.4",
+    "illuminate/collections": "^v10.5.1"
   },
   "authors": [
     {
@@ -20,6 +20,9 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.5"
+    "phpunit/phpunit": "^10.0.19"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
   }
 }
