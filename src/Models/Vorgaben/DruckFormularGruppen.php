@@ -10,7 +10,7 @@ class DruckFormularGruppen
 
     protected array $groups = [
         1008 => 'Verkauf',
-        1014 => 'Eikauf',
+        1014 => 'Einkauf',
     ];
 
     protected int $group;

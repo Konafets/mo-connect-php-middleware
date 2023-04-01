@@ -303,7 +303,7 @@ class AdressenService extends BaseService
      * Modifiziert vorhandenen Ansprechpartner
      *
      * Ablauf:
-     *    1. Struktur AnsprechpartnerItem über adresseAnsprechpartnerGet abrufen.Es wird ein gültiger VersionKey geliefert.
+     *    1. Struktur AnsprechpartnerItem über adresseAnsprechpartnerGet abrufen. Es wird ein gültiger VersionKey geliefert.
      *    2. Daten von AnsprechpartnerItem bei Bedarf anpassen.
      *    3. Funktion adresseAnsprechpartnerModify ausführen.
      *    Es wird ein Status über Erfolg/Fehler der Operation zurückgeliefert.

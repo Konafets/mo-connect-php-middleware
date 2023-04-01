@@ -19,7 +19,7 @@ final class AdressenServiceTest extends BaseTest
     /**
      * @test
      */
-    public function adressFilterTemplate(): void
+    public function adresseFilterTemplate(): void
     {
         $this->mockResponseBodies = [
             'Adressen/adresseFilterTemplateResponse',
@@ -215,7 +215,7 @@ final class AdressenServiceTest extends BaseTest
     /**
      * @test
      */
-    public function addAdressWithOutMatchCode(): void
+    public function addAddressWithOutMatchCode(): void
     {
         $this->mockResponseBodies = [
             'Adressen/AdresseAddResponses/adresseAddResponse_NoMatchCode',
@@ -241,7 +241,7 @@ final class AdressenServiceTest extends BaseTest
     /**
      * @test
      */
-    public function addAdressWithMatchCode(): void
+    public function addAddressWithMatchCode(): void
     {
         $this->mockResponseBodies = [
             'Adressen/AdresseAddResponses/adresseAddResponse_WithMatchCode',
@@ -249,8 +249,8 @@ final class AdressenServiceTest extends BaseTest
         $this->createMockClient();
         $this->service = new AdressenService($this->client);
 
-        $newAdress = new AdresseAddItem('FOO');
-        $response = $this->service->adresseAdd($newAdress);
+        $newAddress = new AdresseAddItem('FOO');
+        $response = $this->service->adresseAdd($newAddress);
 
         self::assertTrue($response->isOk());
         self::assertEquals(
