@@ -1273,7 +1273,9 @@ class AdresseItem
 
     public function __toArray(): array
     {
-        return [
+        $result = [
+            'Adresse_ID' => $this->getAdresseId(),
+            'VersionKey' => $this->getVersionKey(),
             'Matchcode' => $this->getMatchCode(),
             'AdressNr' => $this->getAdressNummer(),
             'Kategorie' => $this->getKategorie(),
