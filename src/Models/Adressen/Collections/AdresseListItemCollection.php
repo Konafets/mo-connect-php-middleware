@@ -3,20 +3,10 @@
 namespace ArrobaIt\MoConnectApi\Models\Adressen\Collections;
 
 use ArrobaIt\MoConnectApi\Models\Adressen\AdresseListItem;
-use ArrobaIt\MoConnectApi\Models\Collection;
+use Illuminate\Support\Collection;
 
 class AdresseListItemCollection extends Collection
 {
-    /**
-     * @var AdresseListItem[]
-     */
-    protected array $items = [];
-
-    public function __construct(array $items = [])
-    {
-        $this->items = $items;
-    }
-
     public static function fromResponse(array $adresseListItems): self
     {
         $items = array_map(static fn($item) =>
@@ -27,8 +17,8 @@ class AdresseListItemCollection extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?AdresseListItem
+    public function offsetGet($key): ?AdresseListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }

@@ -2,22 +2,11 @@
 
 namespace ArrobaIt\MoConnectApi\Models\Vorgaben\Collections;
 
-use ArrobaIt\MoConnectApi\Models\Collection;
-use ArrobaIt\MoConnectApi\Models\Vorgaben\DruckFormularListItem;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\KostenstelleListItem;
+use Illuminate\Support\Collection;
 
 class KostenstelleListItemCollection extends Collection
 {
-    /**
-     * @var KostenstelleListItem[]
-     */
-    protected array $items = [];
-
-    public function __construct(array $items = [])
-    {
-        $this->items = $items;
-    }
-
     public static function fromResponse(array $kostenstelleListItems): self
     {
         $items = array_map(static fn($item) =>
@@ -28,8 +17,8 @@ class KostenstelleListItemCollection extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?KostenstelleListItem
+    public function offsetGet($key): ?KostenstelleListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }

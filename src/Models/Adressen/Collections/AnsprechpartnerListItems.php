@@ -7,12 +7,6 @@ use Illuminate\Support\Collection;
 
 class AnsprechpartnerListItems extends Collection
 {
-    /**
-     * @var AnsprechpartnerListItem[]
-     */
-    protected $items = [];
-
-
     public static function fromResponse(array $adresseListItems): self
     {
         $items = array_map(static fn($item) =>
@@ -23,8 +17,8 @@ class AnsprechpartnerListItems extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?AnsprechpartnerListItem
+    public function offsetGet($key): ?AnsprechpartnerListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }

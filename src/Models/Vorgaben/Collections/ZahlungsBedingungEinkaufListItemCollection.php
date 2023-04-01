@@ -2,19 +2,11 @@
 
 namespace ArrobaIt\MoConnectApi\Models\Vorgaben\Collections;
 
-use ArrayAccess;
-use ArrobaIt\MoConnectApi\Models\Collection;
-use ArrobaIt\MoConnectApi\Models\Vorgaben\KostenstelleListItem;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\ZahlungsBedingungEinkaufListItem;
-use Iterator;
+use Illuminate\Support\Collection;
 
 class ZahlungsBedingungEinkaufListItemCollection extends Collection
 {
-    public function __construct(array $items = [])
-    {
-        $this->items = $items;
-    }
-
     public static function fromResponse(array $zahlungsBedingungEinkaufListItems): self
     {
         $items = array_map(static fn($item) =>
@@ -25,8 +17,8 @@ class ZahlungsBedingungEinkaufListItemCollection extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?ZahlungsBedingungEinkaufListItem
+    public function offsetGet($key): ?ZahlungsBedingungEinkaufListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }

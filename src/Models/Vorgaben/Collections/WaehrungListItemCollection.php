@@ -2,18 +2,11 @@
 
 namespace ArrobaIt\MoConnectApi\Models\Vorgaben\Collections;
 
-use ArrayAccess;
-use ArrobaIt\MoConnectApi\Models\Collection;
-use ArrobaIt\MoConnectApi\Models\Vorgaben\KostenstelleListItem;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\WaehrungListItem;
-use Iterator;
+use Illuminate\Support\Collection;
 
 class WaehrungListItemCollection extends Collection
 {
-    public function __construct(array $items = [])
-    {
-        $this->items = $items;
-    }
 
     public static function fromResponse(array $waehrungListItems): self
     {
@@ -25,8 +18,8 @@ class WaehrungListItemCollection extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?WaehrungListItem
+    public function offsetGet($key): ?WaehrungListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }

@@ -2,19 +2,11 @@
 
 namespace ArrobaIt\MoConnectApi\Models\Vorgaben\Collections;
 
-use ArrayAccess;
-use ArrobaIt\MoConnectApi\Models\Collection;
-use ArrobaIt\MoConnectApi\Models\Vorgaben\KostenstelleListItem;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\NummernkreisListItem;
-use Iterator;
+use Illuminate\Support\Collection;
 
 class NummernkreisListItemCollection extends Collection
 {
-    public function __construct(array $items = [])
-    {
-        $this->items = $items;
-    }
-
     public static function fromResponse(array $nummernkreisListItems): self
     {
         $items = array_map(static fn($item) =>
@@ -25,8 +17,8 @@ class NummernkreisListItemCollection extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?NummernkreisListItem
+    public function offsetGet($key): ?NummernkreisListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }

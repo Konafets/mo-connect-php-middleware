@@ -7,12 +7,6 @@ use Illuminate\Support\Collection;
 
 class SepaMandatListItems extends Collection
 {
-    /**
-     * @var SepaMandatListItem[]
-     */
-    protected $items = [];
-
-
     public static function fromResponse(array $adresseListItems): self
     {
         $items = array_map(static fn($item) =>
@@ -23,8 +17,8 @@ class SepaMandatListItems extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?SepaMandatListItem
+    public function offsetGet($key): ?SepaMandatListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }

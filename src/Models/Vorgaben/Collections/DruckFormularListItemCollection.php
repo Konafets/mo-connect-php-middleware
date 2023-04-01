@@ -2,21 +2,11 @@
 
 namespace ArrobaIt\MoConnectApi\Models\Vorgaben\Collections;
 
-use ArrobaIt\MoConnectApi\Models\Collection;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\DruckFormularListItem;
+use Illuminate\Support\Collection;
 
 class DruckFormularListItemCollection extends Collection
 {
-    /**
-     * @var DruckFormularListItem[]
-     */
-    protected array $items = [];
-
-    public function __construct(array $items = [])
-    {
-        $this->items = $items;
-    }
-
     public static function fromResponse(array $druckFormularListItems): self
     {
         $items = array_map(static fn($item) =>
@@ -27,8 +17,8 @@ class DruckFormularListItemCollection extends Collection
         return new self($items);
     }
 
-    public function offsetGet($offset): ?DruckFormularListItem
+    public function offsetGet($key): ?DruckFormularListItem
     {
-        return parent::offsetGet($offset);
+        return parent::offsetGet($key);
     }
 }
