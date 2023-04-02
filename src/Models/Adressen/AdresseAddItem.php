@@ -2,6 +2,7 @@
 
 namespace ArrobaIt\MoConnectApi\Models\Adressen;
 
+use ArrobaIt\MoConnectApi\Models\Enums\AdresseStatusEnum;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\Steuergebiet;
 use stdClass;
 
@@ -18,9 +19,9 @@ class AdresseAddItem
      */
     protected string $kategorie = '';
 
-    protected AdresseStatus $kundenStatus;
+    protected AdresseStatusEnum $kundenStatus;
 
-    protected AdresseStatus $lieferantenStatus;
+    protected AdresseStatusEnum $lieferantenStatus;
 
     /**
      * Rechnungsanschrift | Firma 1
@@ -208,8 +209,8 @@ class AdresseAddItem
         string $matchCode,
         string $adressNummer = '',
         string $kategorie = '',
-        ?AdresseStatus $kundenStatus = null,
-        ?AdresseStatus $lieferantenStatus = null,
+        AdresseStatusEnum $kundenStatus = AdresseStatusEnum::OHNE_STATUS,
+        AdresseStatusEnum $lieferantenStatus = AdresseStatusEnum::OHNE_STATUS,
         string $raFirma1 = '',
         string $raFirma2 = '',
         string $raAnrede = '',
@@ -290,8 +291,8 @@ class AdresseAddItem
         $this->matchCode = $matchCode;
         $this->adressNummer = $adressNummer;
         $this->kategorie = $kategorie;
-        $this->kundenStatus = $kundenStatus instanceof AdresseStatus ? $kundenStatus : new AdresseStatus();
-        $this->lieferantenStatus = $lieferantenStatus instanceof AdresseStatus ? $lieferantenStatus: new AdresseStatus();
+        $this->kundenStatus = $kundenStatus;
+        $this->lieferantenStatus = $lieferantenStatus;
         $this->raFirma1 = $raFirma1;
         $this->raFirma2 = $raFirma2;
         $this->raAnrede = $raAnrede;
@@ -375,8 +376,8 @@ class AdresseAddItem
             $response->Matchcode,
             $response->AdressNr,
             $response->Kategorie,
-            new AdresseStatus((int)$response->KundenStatus),
-            new AdresseStatus((int)$response->LieferantenStatus),
+            AdresseStatusEnum::from((int)$response->KundenStatus),
+            AdresseStatusEnum::from((int)$response->LieferantenStatus),
             $response->RA_Firma1,
             $response->RA_Firma2,
             $response->RA_Anrede,
@@ -480,22 +481,22 @@ class AdresseAddItem
         $this->kategorie = $kategorie;
     }
 
-    public function getKundenStatus(): AdresseStatus
+    public function getKundenStatus(): AdresseStatusEnum
     {
         return $this->kundenStatus;
     }
 
-    public function setKundenStatus(AdresseStatus $kundenStatus): void
+    public function setKundenStatus(AdresseStatusEnum $kundenStatus): void
     {
         $this->kundenStatus = $kundenStatus;
     }
 
-    public function getLieferantenStatus(): AdresseStatus
+    public function getLieferantenStatus(): AdresseStatusEnum
     {
         return $this->lieferantenStatus;
     }
 
-    public function setLieferantenStatus(AdresseStatus $lieferantenStatus): void
+    public function setLieferantenStatus(AdresseStatusEnum $lieferantenStatus): void
     {
         $this->lieferantenStatus = $lieferantenStatus;
     }
@@ -1259,8 +1260,8 @@ class AdresseAddItem
             'Matchcode' => $this->getMatchCode(),
             'AdressNr' => $this->getAdressNummer(),
             'Kategorie' => $this->getKategorie(),
-            'KundenStatus' => $this->getKundenStatus()->getStatus(),
-            'LieferantenStatus' => $this->getLieferantenStatus()->getStatus(),
+            'KundenStatus' => $this->getKundenStatus()->value,
+            'LieferantenStatus' => $this->getLieferantenStatus()->value,
             'RA_Firma1' => $this->getRaFirma1(),
             'RA_Firma2' => $this->getRaFirma2(),
             'RA_Anrede' => $this->getRaAnrede(),

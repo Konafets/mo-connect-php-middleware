@@ -2,6 +2,7 @@
 
 namespace ArrobaIt\MoConnectApi\Models\Adressen;
 
+use ArrobaIt\MoConnectApi\Models\Enums\AdresseStatusEnum;
 use ArrobaIt\MoConnectApi\Models\Vorgaben\Steuergebiet;
 use stdClass;
 
@@ -22,9 +23,9 @@ class AdresseItem
      */
     protected string $kategorie = '';
 
-    protected AdresseStatus $kundenStatus;
+    protected AdresseStatusEnum $kundenStatus;
 
-    protected AdresseStatus $lieferantenStatus;
+    protected AdresseStatusEnum $lieferantenStatus;
 
     /**
      * Rechnungsanschrift | Firma 1
@@ -178,8 +179,8 @@ class AdresseItem
         string $matchCode,
         string $adressNummer,
         string $kategorie,
-        AdresseStatus $kundenStatus,
-        AdresseStatus $lieferantenStatus,
+        AdresseStatusEnum $kundenStatus,
+        AdresseStatusEnum $lieferantenStatus,
         string $raFirma1,
         string $raFirma2,
         string $raAnrede,
@@ -350,8 +351,8 @@ class AdresseItem
             $response->Matchcode,
             $response->AdressNr,
             $response->Kategorie,
-            new AdresseStatus((int)$response->KundenStatus),
-            new AdresseStatus((int)$response->LieferantenStatus),
+            AdresseStatusEnum::from((int) $response->KundenStatus),
+            AdresseStatusEnum::from((int) $response->LieferantenStatus),
             $response->RA_Firma1,
             $response->RA_Firma2,
             $response->RA_Anrede,
@@ -473,32 +474,32 @@ class AdresseItem
 
     public function getKundenStatus(): int
     {
-        return $this->kundenStatus->getStatus();
+        return $this->kundenStatus->value;
     }
 
     public function getKundenStatusBeschreibung(): string
     {
-        return (string) $this->kundenStatus;
+        return $this->kundenStatus->description();
     }
 
     public function setKundenStatus(int $kundenStatus): void
     {
-        $this->kundenStatus->setStatus($kundenStatus);
+        $this->kundenStatus = AdresseStatusEnum::from($kundenStatus);
     }
 
     public function getLieferantenStatus(): int
     {
-        return $this->lieferantenStatus->getStatus();
+        return $this->lieferantenStatus->value;
     }
 
     public function getLieferantenStatusBeschreibung(): string
     {
-        return (string) $this->lieferantenStatus;
+        return $this->lieferantenStatus->description();
     }
 
     public function setLieferantenStatus(int $lieferantenStatus): void
     {
-        $this->lieferantenStatus->setStatus($lieferantenStatus);
+        $this->lieferantenStatus = AdresseStatusEnum::from($lieferantenStatus);
     }
 
     public function getRaFirma1(): string
