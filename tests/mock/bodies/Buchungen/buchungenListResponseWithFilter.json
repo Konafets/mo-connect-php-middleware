@@ -1,0 +1,17 @@
+{
+ "buchungListResponse": {
+  "ReturnData": {
+   "BuchungListItem": [
+    {
+     "Buchung_ID": "4B1D754683FF2B7DB23598B64C18",
+     "Datum": "2023-04-01",
+     "Text": "Zahlung, ReNr: 000001, IMPORTED_CUSTOMER1",
+     "Status": 1,
+     "Summe": "357,00",
+     "SummeFW": "357,00",
+     "BelegNr": "000001"
+    }
+   ]
+  }
+ }
+}

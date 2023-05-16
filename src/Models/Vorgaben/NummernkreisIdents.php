@@ -46,13 +46,6 @@ class NummernkreisIdents
         $this->id = $id;
     }
 
-    public static function fromResponse(stdClass $response): self
-    {
-        self::$content = $response;
-
-        return new self();
-    }
-
     public function getId(): int
     {
         return $this->id;

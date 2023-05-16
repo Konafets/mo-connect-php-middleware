@@ -1,0 +1,70 @@
+{
+  "buchungTemplateResponse": {
+    "ReturnData": {
+      "BuchungAddItem": {
+        "Datum": "",
+        "Text": "",
+        "BelegNr": "",
+        "Referenz": "",
+        "Notizen": "",
+        "Waehrung": "EUR",
+        "Kurs": "",
+        "BuchungPositionItemList": {
+          "BuchungPositionAddItem": [
+            {
+              "Betrag": "",
+              "KontoSoll": 0,
+              "KontoHaben": 0,
+              "Kostenstelle1": "",
+              "Kostenstelle2": "",
+              "Steuersatz": "",
+              "Text": "",
+              "BuchungBetragBasis": 0,
+              "OSS_Daten": {
+                "OSSDatenItem": {
+                  "Isocode": "",
+                  "Steuersatz": "",
+                  "Typ": 1
+                }
+              }
+            },
+            {
+              "Betrag": "",
+              "KontoSoll": 0,
+              "KontoHaben": 0,
+              "Kostenstelle1": "",
+              "Kostenstelle2": "",
+              "Steuersatz": "",
+              "Text": "",
+              "BuchungBetragBasis": 0,
+              "OSS_Daten": {
+                "OSSDatenItem": {
+                  "Isocode": "",
+                  "Steuersatz": "",
+                  "Typ": 1
+                }
+              }
+            },
+            {
+              "Betrag": "",
+              "KontoSoll": 0,
+              "KontoHaben": 0,
+              "Kostenstelle1": "",
+              "Kostenstelle2": "",
+              "Steuersatz": "",
+              "Text": "",
+              "BuchungBetragBasis": 0,
+              "OSS_Daten": {
+                "OSSDatenItem": {
+                  "Isocode": "",
+                  "Steuersatz": "",
+                  "Typ": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

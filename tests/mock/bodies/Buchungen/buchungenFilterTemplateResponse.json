@@ -1,0 +1,16 @@
+{
+ "buchungFilterTemplateResponse": {
+  "ReturnData": {
+   "BuchungFilter": {
+    "Suchtext": "Foo",
+    "DatumVon": "2023-01-01",
+    "DatumBis": "2023-12-31",
+    "FestschreibStatus": 4,
+    "BelegNr": "12345",
+    "Konto": 1200,
+    "KontoSoll": 3,
+    "KontoHaben": 5
+   }
+  }
+ }
+}

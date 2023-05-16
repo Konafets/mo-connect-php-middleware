@@ -1,0 +1,129 @@
+{
+ "buchungGetResponse": {
+  "ReturnData": {
+   "BuchungItem": {
+    "Buchung_ID": "4B1D754683FF2B7DB23598B64C18",
+    "Datum": "2023-04-01",
+    "Text": "Zahlung, ReNr: 000001, IMPORTED_CUSTOMER1",
+    "Status": 1,
+    "Summe": "357,00",
+    "SummeFW": "357,00",
+    "BelegNr": "000001",
+    "EingabeDatum": "2023-04-01",
+    "Referenz": "",
+    "Notizen": "",
+    "KontoSoll": 1200,
+    "KontoHaben": 0,
+    "Waehrung": "EUR",
+    "Kurs": "1,00000000",
+    "Steuersatz": "<div>",
+    "FestschreibStatus": 1,
+    "BuchungJournalItemList": {
+     "BuchungJournalItem": [
+      {
+       "Journalnummer": "",
+       "Konto": 1200,
+       "Kontobezeichnung": "Bank",
+       "BetragSoll": "357,00",
+       "BetragHaben": "0,00",
+       "Steuersatz": "",
+       "Text": "Zahlung, ReNr: 000001, IMPORTED_CUSTOMER1",
+       "Kostenstelle1": "",
+       "Kostenstelle2": "",
+       "FW_Soll": "357,00",
+       "FW_Haben": "0,00",
+       "OSS_Daten": {
+        "OSSDatenItem": {
+         "Isocode": "",
+         "Steuersatz": "0,00",
+         "Typ": 1
+        }
+       }
+      },
+      {
+       "Journalnummer": "",
+       "Konto": 8400,
+       "Kontobezeichnung": "Erlöse 19% USt",
+       "BetragSoll": "0,00",
+       "BetragHaben": "100,00",
+       "Steuersatz": "USt19",
+       "Text": "Zahlung, ReNr: 000001, IMPORTED_CUSTOMER1",
+       "Kostenstelle1": "",
+       "Kostenstelle2": "",
+       "FW_Soll": "0,00",
+       "FW_Haben": "100,00",
+       "OSS_Daten": {
+        "OSSDatenItem": {
+         "Isocode": "",
+         "Steuersatz": "0,00",
+         "Typ": 1
+        }
+       }
+      },
+      {
+       "Journalnummer": "",
+       "Konto": 1776,
+       "Kontobezeichnung": "Umsatzsteuer 19%",
+       "BetragSoll": "0,00",
+       "BetragHaben": "19,00",
+       "Steuersatz": "",
+       "Text": "USt 19,00% (Zahlung, ReNr: 000001, IMPORTED_CUSTOMER1)",
+       "Kostenstelle1": "",
+       "Kostenstelle2": "",
+       "FW_Soll": "0,00",
+       "FW_Haben": "19,00",
+       "OSS_Daten": {
+        "OSSDatenItem": {
+         "Isocode": "",
+         "Steuersatz": "0,00",
+         "Typ": 1
+        }
+       }
+      },
+      {
+       "Journalnummer": "",
+       "Konto": 8400,
+       "Kontobezeichnung": "Erlöse 19% USt",
+       "BetragSoll": "0,00",
+       "BetragHaben": "200,00",
+       "Steuersatz": "USt19",
+       "Text": "Zahlung, ReNr: 000001, IMPORTED_CUSTOMER1",
+       "Kostenstelle1": "",
+       "Kostenstelle2": "",
+       "FW_Soll": "0,00",
+       "FW_Haben": "200,00",
+       "OSS_Daten": {
+        "OSSDatenItem": {
+         "Isocode": "",
+         "Steuersatz": "0,00",
+         "Typ": 1
+        }
+       }
+      },
+      {
+       "Journalnummer": "",
+       "Konto": 1776,
+       "Kontobezeichnung": "Umsatzsteuer 19%",
+       "BetragSoll": "0,00",
+       "BetragHaben": "38,00",
+       "Steuersatz": "",
+       "Text": "USt 19,00% (Zahlung, ReNr: 000001, IMPORTED_CUSTOMER1)",
+       "Kostenstelle1": "",
+       "Kostenstelle2": "",
+       "FW_Soll": "0,00",
+       "FW_Haben": "38,00",
+       "OSS_Daten": {
+        "OSSDatenItem": {
+         "Isocode": "",
+         "Steuersatz": "0,00",
+         "Typ": 1
+        }
+       }
+      }
+     ]
+    },
+    "AttachmentIDList": []
+   }
+  }
+ }
+}

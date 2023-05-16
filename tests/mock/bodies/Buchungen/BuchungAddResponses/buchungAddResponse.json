@@ -1,0 +1,11 @@
+{
+ "buchungAddResponse": {
+  "ReturnData": {
+   "ReturnStatus": {
+    "Statuscode": 0,
+    "Statustext": "",
+    "Insert_ID": "4B1D754683FF2B7DB23598B54C18"
+   }
+  }
+ }
+}
