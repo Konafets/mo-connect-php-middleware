@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace ArrobaIt\MoConnectApi\Services\Debitoren;
 
 use ArrobaIt\MoConnectApi\Models\Debitoren\Collections\DebitorenRechnungListItemCollection;
+use ArrobaIt\MoConnectApi\Models\Debitoren\Collections\DebitorenZahlungListItemCollection;
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenRechnungAddItem;
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenRechnungFilter;
+use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenRechnungItem;
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenZahlungFilter;
+use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenZahlungItem;
 use ArrobaIt\MoConnectApi\Models\Http\ReturnStatus;
 use ArrobaIt\MoConnectApi\Services\BaseService;
 use ArrobaIt\MoConnectApi\Services\Buchungen\AttachmentAddItem;
@@ -162,17 +165,45 @@ class DebitorenService extends BaseService
     /**
      * Auflistung Debitorenzahlungen
      */
-    public function debitorenZahlungList(): DebitorenZahlungListItem
+    public function debitorenZahlungList(DebitorenZahlungFilter $filter = null): DebitorenZahlungListItemCollection
     {
+        $request = [
+            'debitorenZahlungList' => '',
+        ];
 
+        if ($filter instanceof DebitorenZahlungFilter) {
+            $request['debitorenZahlungList'] = [
+                'DebitorenZahlungFilter' => $filter->__toArray()
+            ];
+        }
+
+        try {
+            $response = $this->client->send($request);
+            return DebitorenZahlungListItemCollection::fromResponse(
+                $response->debitorenZahlungListResponse->ReturnData->DebitorenZahlungListItem
+            );
+        } catch (JsonException | GuzzleException $e) {
+        }
     }
 
     /**
      * Liefert Details einer Debitorenzahlung
      */
-    public function debitorenZahlungGet(): DebitorenZahlungItem
+    public function debitorenZahlungGet(string $id): DebitorenZahlungItem
     {
+        $request = [
+            'debitorenZahlungGet' => [
+                'Zahlung_ID' => $id
+            ],
+        ];
 
+        try {
+            $response = $this->client->send($request);
+            return DebitorenZahlungItem::fromResponse(
+                $response->debitorenZahlungGetResponse->ReturnData->DebitorenZahlungItem
+            );
+        } catch (JsonException | GuzzleException $e) {
+        }
     }
 
     /**
