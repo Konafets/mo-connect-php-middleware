@@ -201,7 +201,7 @@ class AdresseAddItem
     protected bool $mailPreferred;
 
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected array $attachmentIdList;
 

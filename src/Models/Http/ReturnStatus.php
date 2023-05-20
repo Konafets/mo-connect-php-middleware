@@ -10,7 +10,7 @@ class ReturnStatus
     protected Statuscode $statuscode;
 
     /**
-     * @var \Illuminate\Support\Collection|StatustextItem[]
+     * @var \Illuminate\Support\Collection<StatustextItem>
      */
     protected Collection $statustextItems;
 
@@ -51,6 +51,9 @@ class ReturnStatus
         return $this->statuscode->getStatusCode();
     }
 
+    /**
+     * @return Collection<StatustextItem>
+     */
     public function getStatustextItems(): Collection
     {
         return $this->statustextItems;
