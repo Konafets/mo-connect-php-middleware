@@ -38,7 +38,7 @@ class AdressePreisAngabe
         return $this->getBeschreibung();
     }
 
-    public function toArray(): array
+    public function __toArray(): array
     {
         return [
             'AdressePreisAngabe' => $this->getAngabe(),

@@ -53,7 +53,7 @@ class KontaktRolle
         return $this->getBeschreibung();
     }
 
-    public function toArray(): array
+    public function __toArray(): array
     {
         return [
             'KontaktRolle' => $this->getRolle(),

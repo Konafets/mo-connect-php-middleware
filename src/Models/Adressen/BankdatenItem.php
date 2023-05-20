@@ -69,7 +69,7 @@ class BankdatenItem
         $this->inhaber = $inhaber;
     }
 
-    public function toArray(): array
+    public function __toArray(): array
     {
         return [
             'BankdatenItem' => [
