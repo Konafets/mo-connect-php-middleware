@@ -206,7 +206,7 @@ class AdresseAddItem
     protected array $attachmentIdList;
 
     public function __construct(
-        string $matchCode,
+        string $matchCode = '',
         string $adressNummer = '',
         string $kategorie = '',
         AdresseStatusEnum $kundenStatus = AdresseStatusEnum::OHNE_STATUS,
