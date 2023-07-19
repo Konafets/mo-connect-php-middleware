@@ -3,7 +3,7 @@
 namespace ArrobaIt\MoConnectApi\Models\Adressen;
 
 use ArrobaIt\MoConnectApi\Models\Enums\AdresseStatusEnum;
-use ArrobaIt\MoConnectApi\Models\Vorgaben\Steuergebiet;
+use ArrobaIt\MoConnectApi\Models\Enums\SteuerGebietEnum;
 use stdClass;
 
 class AdresseAddItem
@@ -186,7 +186,7 @@ class AdresseAddItem
 
     protected BankdatenItem $lfBankdaten;
 
-    protected Steuergebiet $steuergebiet;
+    protected SteuergebietEnum $steuergebiet;
 
     protected string $uStId = '';
 
@@ -279,7 +279,7 @@ class AdresseAddItem
         bool $lfBestellstopp = false,
         string $lfRabatt = '',
         BankdatenItem $lfBankdaten = null,
-        Steuergebiet $steuergebiet = null,
+        SteuergebietEnum $steuergebiet = SteuerGebietEnum::INLAND,
         string $uStId = '',
         string $belegsprache = '',
         string $briefanrede = '',
@@ -361,7 +361,7 @@ class AdresseAddItem
         $this->lfBestellstopp = $lfBestellstopp;
         $this->lfRabatt = $lfRabatt;
         $this->lfBankdaten = $lfBankdaten instanceof BankdatenItem ? $lfBankdaten : new BankdatenItem();
-        $this->steuergebiet = $steuergebiet instanceof Steuergebiet ? $steuergebiet : new Steuergebiet();
+        $this->steuergebiet = $steuergebiet;
         $this->uStId = $uStId;
         $this->belegsprache = $belegsprache;
         $this->briefanrede = $briefanrede;
@@ -446,7 +446,7 @@ class AdresseAddItem
             $response->LF_Bestellstopp,
             $response->LF_Rabatt,
             BankdatenItem::fromResponse($response->LF_Bankdaten),
-            new Steuergebiet($response->Steuergebiet),
+            SteuergebietEnum::from((int)$response->Steuergebiet),
             $response->UStID,
             $response->Belegsprache,
             $response->Briefanrede,
@@ -1189,12 +1189,12 @@ class AdresseAddItem
         $this->lfBankdaten = $lfBankdaten;
     }
 
-    public function getSteuergebiet(): Steuergebiet
+    public function getSteuergebiet(): SteuergebietEnum
     {
         return $this->steuergebiet;
     }
 
-    public function setSteuergebiet(Steuergebiet $steuergebiet): void
+    public function setSteuergebiet(SteuergebietEnum $steuergebiet): void
     {
         $this->steuergebiet = $steuergebiet;
     }
@@ -1330,7 +1330,7 @@ class AdresseAddItem
             'LF_Waehrung' => $this->getLfWaehrung(),
             'LF_FinanzKonto' => $this->getLfFinanzKonto(),
             'LF_Bankdaten' => $this->getLfBankdaten()->__toArray(),
-            'Steuergebiet' => $this->getSteuergebiet()->getGebiet(),
+            'Steuergebiet' => $this->getSteuergebiet()->value,
             'UStID' => $this->getUStId(),
             'Belegsprache' => $this->getBelegsprache(),
             'Briefanrede' => $this->getBriefanrede(),

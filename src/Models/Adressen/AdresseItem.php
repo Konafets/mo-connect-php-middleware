@@ -3,7 +3,7 @@
 namespace ArrobaIt\MoConnectApi\Models\Adressen;
 
 use ArrobaIt\MoConnectApi\Models\Enums\AdresseStatusEnum;
-use ArrobaIt\MoConnectApi\Models\Vorgaben\Steuergebiet;
+use ArrobaIt\MoConnectApi\Models\Enums\SteuerGebietEnum;
 use stdClass;
 
 class AdresseItem
@@ -160,7 +160,7 @@ class AdresseItem
     protected bool $lfBestellstopp;
     protected string $lfRabatt = '';
     protected BankdatenItem $lfBankdaten;
-    protected Steuergebiet $steuergebiet;
+    protected SteuergebietEnum $steuergebiet;
     protected string $uStId = '';
     protected string $belegsprache = '';
     protected string $briefanrede = '';
@@ -249,7 +249,7 @@ class AdresseItem
         bool $lfBestellstopp,
         string $lfRabatt,
         BankdatenItem $lfBankdaten,
-        Steuergebiet $steuergebiet,
+        SteuergebietEnum $steuergebiet,
         string $uStId,
         string $belegsprache,
         string $briefanrede,
@@ -421,7 +421,7 @@ class AdresseItem
             $response->LF_Bestellstopp,
             $response->LF_Rabatt,
             BankdatenItem::fromResponse($response->LF_Bankdaten),
-            new Steuergebiet($response->Steuergebiet),
+            SteuergebietEnum::from((int) $response->Steuergebiet),
             $response->UStID,
             $response->Belegsprache,
             $response->Briefanrede,
@@ -1194,17 +1194,17 @@ class AdresseItem
 
     public function getSteuergebiet(): int
     {
-        return $this->steuergebiet->getGebiet();
+        return $this->steuergebiet->value;
     }
 
     public function getSteuergebietBeschreibung(): string
     {
-        return (string) $this->steuergebiet;
+        return (string) $this->steuergebiet->description();
     }
 
-    public function setSteuergebiet(int $steuergebiet): void
+    public function setSteuergebiet(SteuerGebietEnum $steuergebiet): void
     {
-        $this->steuergebiet->setGebiet($steuergebiet);
+        $this->steuergebiet = $steuergebiet;
     }
 
     public function getUStId(): string
