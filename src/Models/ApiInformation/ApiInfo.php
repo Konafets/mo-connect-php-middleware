@@ -59,6 +59,22 @@ class ApiInfo
         );
     }
 
+    public static function null(): self
+    {
+        return new self(
+            '',
+            '',
+            '',
+            0,
+            0,
+            0,
+            0,
+            0,
+            '',
+            false,
+        );
+    }
+
     public function __construct(
         string $appName,
         string $homepage,

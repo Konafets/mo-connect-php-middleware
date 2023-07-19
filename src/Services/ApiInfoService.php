@@ -17,6 +17,7 @@ class ApiInfoService extends BaseService
             $response = $this->client->send($request);
             return ApiInfo::fromResponse($response->apiInfoGetResponse->ReturnData);
         } catch (\JsonException | GuzzleException $e) {
+            return ApiInfo::null();
         }
     }
 }
