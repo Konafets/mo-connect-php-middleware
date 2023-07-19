@@ -9,8 +9,10 @@ use ArrobaIt\MoConnectApi\Models\Debitoren\Collections\DebitorenZahlungListItemC
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenRechnungAddItem;
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenRechnungFilter;
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenRechnungItem;
+use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenZahlungAddItem;
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenZahlungFilter;
 use ArrobaIt\MoConnectApi\Models\Debitoren\DebitorenZahlungItem;
+use ArrobaIt\MoConnectApi\Models\Enums\ZahlungsartEnum;
 use ArrobaIt\MoConnectApi\Models\Http\ReturnStatus;
 use ArrobaIt\MoConnectApi\Services\BaseService;
 use ArrobaIt\MoConnectApi\Services\Buchungen\AttachmentAddItem;
@@ -215,9 +217,28 @@ class DebitorenService extends BaseService
      *   2. Funktion debitorenZahlungCreate mit Parameter Posten_ID,Datum,Konto,Zahlungsart ausführen.
      *   3. Es wird eine Zahlung angelegt, Rückgabe InsertID oder Fehlerstatus.
      */
-    public function debitorenZahlungCreate(): ReturnStatus
+    public function debitorenZahlungCreate(string $postenId, string $date, string $konto, ZahlungsartEnum $zahlungsart = null): ReturnStatus
     {
+        $request = [
+            'debitorenZahlungCreate' => [
+                'Posten_ID' => $postenId,
+                'Datum' => $date,
+                'Konto' => $konto,
+            ],
+        ];
 
+        // Zahlungsart optional, default ist Angabe im Posten.
+        if ($zahlungsart instanceof ZahlungsartEnum) {
+            $request['debitorenZahlungCreate']['Zahlungsart'] = $zahlungsart->value;
+        }
+
+        try {
+            $response = $this->client->send($request);
+            return ReturnStatus::fromResponse(
+                $response->debitorenZahlungCreateResponse->ReturnData->ReturnStatus
+            );
+        } catch (JsonException | GuzzleException $e) {
+        }
     }
 
     /**
