@@ -10,22 +10,33 @@ class Client
     /**
      * Zugriffs-URL MonKey Office Connect
      */
-    private const MO_API_URL = 'http://127.0.0.1:8084/monkeyOfficeConnectJSON';
+    private const MO_API_URL = 'http://%s:%s/monkeyOfficeConnectJSON';
 
     protected \GuzzleHttp\Client $client;
 
     protected string $moApiFirma;
 
-    public function __construct(string $username, string $password, string $company = '', HandlerStack $handler = null, $options = [])
-    {
+    private string $baseUri;
+
+    public function __construct(
+        string $username,
+        string $password,
+        string $company = '',
+        string $host = '127.0.0.1',
+        string $port = '8084',
+        HandlerStack $handler = null,
+        $options = []
+    ) {
         $headers['Content-Type'] = 'application/x-www-form-urlencoded';
 
         if ($company !== '') {
             $headers['mbl-ident'] = $company;
         }
 
+        $this->baseUri = sprintf(self::MO_API_URL, $host, $port);
+
         $config = [
-            'base_uri' => self::MO_API_URL,
+            'base_uri' => $this->baseUri,
             'verify' => false,
             'allow_redirects' => true,
             'auth' => [
@@ -46,7 +57,7 @@ class Client
 
     public static function fromCredentials(array $credentials): self
     {
-        return new self($credentials['username'], $credentials['password'], $credentials['company']);
+        return new self($credentials['username'], $credentials['password'], $credentials['company'], $credentials['host'], $credentials['port']);
     }
 
     public function setCompany(string $company): void
@@ -120,7 +131,7 @@ class Client
      */
     public function send(array $request): object
     {
-        $response = $this->client->post(self::MO_API_URL, [
+        $response = $this->client->post($this->baseUri, [
             'debug' => false,
             'body' => json_encode($request, JSON_THROW_ON_ERROR),
         ]);

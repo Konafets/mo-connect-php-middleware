@@ -21,6 +21,8 @@ final class ClientTest extends TestCase
             'username' => $_ENV['USERNAME'],
             'password' => $_ENV['PASSWORD'],
             'company' => $_ENV['COMPANY_ID'],
+            'host' => $_ENV['API_HOST'],
+            'port' => $_ENV['API_PORT'],
         ];
 
         $this->client = Client::fromCredentials($credentials);

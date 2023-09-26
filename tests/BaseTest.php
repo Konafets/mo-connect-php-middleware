@@ -35,7 +35,14 @@ class BaseTest extends TestCase
 
         $handlerStack = HandlerStack::create($mock);
 
-        $this->client = new Client($_ENV['USERNAME'], $_ENV['PASSWORD'], $_ENV['COMPANY_ID'], $handlerStack);
+        $this->client = new Client(
+            $_ENV['USERNAME'],
+            $_ENV['PASSWORD'],
+            $_ENV['COMPANY_ID'],
+            $_ENV['API_HOST'],
+            $_ENV['API_PORT'],
+            $handlerStack
+        );
     }
 }
 
